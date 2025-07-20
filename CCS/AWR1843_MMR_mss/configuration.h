@@ -53,7 +53,8 @@
 #define DFE_DATA_OUTPUT_MODE    FRAME_BASED_CHIRP
 
 // channel configuration
-#define RX_ANTENNA_MASK         0X3
+// #define RX_ANTENNA_MASK         0X3
+#define RX_ANTENNA_MASK         0XF // MODIFICA
 #define TX_ANTENNA_MASK         1
 
 

@@ -179,6 +179,22 @@ typedef struct MmwDemo_DSS_DataPathObj_t
     /*! @brief ADCBUF input samples */
     cmplx16ReIm_t *adcDataIn;
 
+    ////////////////////// AGGIUNTO ///////////////////
+
+    /* AZIMUTH FFT */
+    /*! @brief input for azimuth calculation ---> L1*/
+    cmplx16ReIm_t *dataAzIn;
+
+    /*! @brief array of azimuth window--> L2*/
+    cmplx16ReIm_t *window2D;
+
+    /*! @brief output of one azimuth fft --> L2*/
+    cmplx16ReIm_t *fftOut2D;
+
+    /*! @brief output Range Azimuth map (all fft az) --> L3*/
+    cmplx16ReIm_t *rangeAzMap;
+    ////////////////////////////////////////////////
+
     /*! @brief Pointer to Radar Cube memory */
     cmplx16ReIm_t *radarCube;
 

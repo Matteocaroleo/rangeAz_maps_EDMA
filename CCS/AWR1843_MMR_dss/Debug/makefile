@@ -164,12 +164,7 @@ BIN_OUTPUTS__QUOTED += \
 
 
 # All Target
-all:
-	@$(MAKE) --no-print-directory pre-build
-	@$(MAKE) --no-print-directory main-build
-
-# Main-build Target
-main-build: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
+all: $(OBJS) $(CMD_SRCS) $(GEN_CMDS)
 	@$(MAKE) --no-print-directory -Onone "AWR1843_MMR_dss_version_1.xe674"
 
 # Tool invocations
@@ -197,10 +192,6 @@ clean:
 	-$(RM) "intvecs.d" 
 	-$(RMDIR) $(GEN_MISC_DIRS__QUOTED)
 	-@echo 'Finished clean'
-	-@echo ' '
-
-pre-build:
-	-rm -f C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/AWR1843_MMR_dss_version_1.bin
 	-@echo ' '
 
 post-build:

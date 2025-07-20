@@ -192,7 +192,7 @@ clean:
 	-@echo ' '
 
 pre-build:
-	-rm -f C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_mss/AWR1843_MMR_mss_version_1.bin
+	-if exist "C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_mss/AWR1843_MMR_dss_version_1.bin" del /f "C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_mss/AWR1843_MMR_dss_version_1.bin"
 	-@echo ' '
 
 post-build:

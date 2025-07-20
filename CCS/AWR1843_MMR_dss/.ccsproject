@@ -13,5 +13,5 @@
 	<templateProperties value="id=mmwNonOS_dss.projectspec.AWR16xx_dss_nonOS,products=com.ti.MMWAVE_SDK:2.0.0.04,xdcToolsVersion=3.50.4.43_core,target=ti.targets.elf.C674,platform=ti.platforms.c6x:AWR16XX:false:600,endianness=little,output_format=elf,buildProfile=release"/>
 	<origin value="C:/Users/caffi/Desktop/Dottorato/WorkSpaces/Update_11220/AWR1843_MMR_dss"/>
 	<filesToOpen value=""/>
-	<isTargetManual value="false"/>
+	<isTargetManual value="true"/>
 </projectOptions>

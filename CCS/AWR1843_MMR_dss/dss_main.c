@@ -643,6 +643,7 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
             printf("too many output data!");
             return -1;
         }
+        //      DESTINATION -          SOURCE -            LENGTH
         memcpy(ptrCurrBuffer, (void *)&vitalSignsOut, itemPayloadLen);
 
         message.body.detObj.tlv[tlvIdx].length = itemPayloadLen;
@@ -677,6 +678,9 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
         totalPacketLen += sizeof(MmwDemo_output_message_tl) + itemPayloadLen;
         ptrCurrBuffer = (uint8_t *)((uint32_t)ptrHsmBuffer + totalHsmSize);
     }
+
+    // OUR HEATMAP (Range-Azimuth)
+
 
     if (obj->transmitAdcData == 1){
 
@@ -1420,7 +1424,7 @@ static int32_t dssDataPathProcessEvents(unsigned int event)
                 gCycleLog.interChirpWaitTime = 0;
 
                 startTime = Cycleprofiler_getTimeStamp();
-                interFrameProcessing(dataPathObj);
+                interFrameProcessing (dataPathObj);
                 dataPathObj->cycleLog.interFrameProcessingTime = Cycleprofiler_getTimeStamp() - startTime;
 
 

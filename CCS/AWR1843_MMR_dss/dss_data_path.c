@@ -460,9 +460,9 @@ void interChirpProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongId)
 
 
         // copy adc data into the adcDataCube
-        memcpy(&obj->adcDataCube[antIndx*obj->numAdcSamples],
-               &obj->adcDataIn[adcDataOffset],
-               obj->numAdcSamples*sizeof(cmplx16ReIm_t) );
+        memcpy(&obj->adcDataCube[antIndx*obj->numAdcSamples],   // DESTINATION
+               &obj->adcDataIn[adcDataOffset],                  // SOURCE
+               obj->numAdcSamples*sizeof(cmplx16ReIm_t) );      // LENGTH
 
 
         /* Range FFT */
@@ -622,6 +622,27 @@ void interFrameProcessing(MmwDemo_DSS_DataPathObj *obj)
     outputFilterBreathOut = filter_IIR_BiquadCascade(phaseUsedComputation, obj->pFilterCoefsBreath, obj->pScaleValsBreath, obj->pDelayBreath, IIR_FILTER_BREATH_NUM_STAGES);
     outputFilterHeartOut  = filter_IIR_BiquadCascade(phaseUsedComputation, obj->pFilterCoefsHeart_4Hz, obj->pScaleValsHeart_4Hz, obj->pDelayHeart, IIR_FILTER_HEART_NUM_STAGES);
 
+  ///////////////////////////////////////////////////////////////////////
+ /////// CALCOLO DELL'AZIMUTH //////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////
+
+    /* WORKFLOW*/
+
+    //- trasferimento ping pong CON TRASPOSTA
+        // config edma
+
+
+
+    //- fft in azimuth SU L2
+
+    // heatmap?
+
+    // ping pong su L3 per concludere
+
+
+
+
+
     // Output Values
     obj->VitalSigns_Output.rangeBinIndexMax      = rangeBinMax;
     obj->VitalSigns_Output.rangeBinIndexPhase    = rangeBinIndexPhase;
@@ -630,7 +651,8 @@ void interFrameProcessing(MmwDemo_DSS_DataPathObj *obj)
     obj->VitalSigns_Output.outputFilterHeartOut  = outputFilterHeartOut;
     obj->VitalSigns_Output.maxVal                = maxVal;
     obj->VitalSigns_Output.frameCounter          = gFrameCount; // For debug purposes
-
+//
+//  obj->VitalSigns_Output.heatmap... OPPURE nuovoOggetto->out
 #endif
 
 }
@@ -699,7 +721,7 @@ void chirpProcess(MmwDemo_DSS_DataPathObj *obj,uint16_t chirpIndx)
   *  @retval
   *      Not Applicable.
   */
-void MmwDemo_waitEndOfChirps(MmwDemo_DSS_DataPathObj *obj)
+void    MmwDemo_waitEndOfChirps(MmwDemo_DSS_DataPathObj *obj)
 {
 
     /* Wait for transfer of data corresponding to last 2 chirps (ping/pong) */
@@ -870,7 +892,14 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
                   heapL1start, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
                   2 * obj->numRangeBinsCalc);
     heapUsed = prev_end  - heapL1start;
-    
+
+    ////////////////////////////// AGGIUNTO ////////////////////////////////
+    MMW_ALLOC_BUF (dataAzIn, cmplx16ReIm_t,
+                    adcDataIn_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP, // giusto alignment?
+                    2 * obj->numRxAntennas * obj->numRangeBinsCalc);
+    ////////////////////////////////////////////////////////////////////////
+
+
     MmwDemo_dssAssert(heapUsed <= MMW_L1_HEAP_SIZE);
     MmwDemo_printHeapStats("L1", heapUsed, MMW_L1_HEAP_SIZE);
 	prev_end = heapL2start;
@@ -887,6 +916,22 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
     MMW_ALLOC_BUF(window1D, int16_t,
                   twiddle16x16_1D_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
                   obj->numAdcSamples / 2);
+
+    ////////////////////////////////// AGGIUNTO //////////////////////
+
+    // AL MOMENTO NON IMPLEMENTATA IN QUANTO CON SOLO 1 TX FARLA SU 4 CAMPIONI potrebbe essere troppo aggressiva
+    //MMW_ALLOC_BUF(window2D, int16_t,
+     //             window1D_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
+      //            obj->numRxAntennas / 2);
+    ////////////////////////////////////////////////////////////////
+
+    ////////////////////////////////// AGGIUNTO //////////////////////
+    MMW_ALLOC_BUF(fftOut2D, int16_t,
+                  window1D_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
+                  2 * obj->numRxAntennas * obj->numRangeBinsCalc);
+
+
+
 
 	heapUsed = prev_end - heapL2start;
 
@@ -982,9 +1027,14 @@ void MmwDemo_dataPathConfigFFTs(MmwDemo_DSS_DataPathObj *obj)
                         MMW_WIN_BLACKMAN);
 
 
+    // GENERAZIONE WINDOW PER AZIMUTH
+
+
+
     /* Generate twiddle factors for 1D FFT. This is one time */
     MmwDemo_gen_twiddle_fft16x16_fast((int16_t *)obj->twiddle16x16_1D, obj->numRangeBinsCalc);
 
+    // GENERAZIONE TWIDDLE FACTOR PER AZIMUTH
 
 }
 

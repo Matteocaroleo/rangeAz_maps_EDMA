@@ -1,320 +1,344 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
-    <storageModule configRelations="2" moduleId="org.eclipse.cdt.core.settings">
-        <cconfiguration id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485">
-            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485" moduleId="org.eclipse.cdt.core.settings" name="Debug">
-                <macros>
-                    <stringMacro name="ORIGINAL_PROJECT_ROOT" type="VALUE_PATH_ANY" value="C:/Users/caffi/Desktop/Dottorato/Codice Sara AWR1642/DMA_catenaria_AWR1642_perMattia/DMA_catenaria_AWR1642_perMattia/firmware/AWR16xx_dss_nonOS_catenaria"/>
-                    <stringMacro name="TI_DSPLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/dsplib_c64Px_3_4_0_0"/>
-                    <stringMacro name="TI_MATHLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/mathlib_c674x_3_1_2_1"/>
-                </macros>
-                <externalSettings/>
-                <extensions>
-                    <extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
-                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
-                    <extension id="com.ti.ccs.errorparser.CompilerErrorParser_TI" point="com.ti.ccs.project.ErrorParser"/>
-                    <extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
-                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    <extension id="com.ti.ccstudio.errorparser.CoffErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    <extension id="com.ti.ccstudio.errorparser.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    <extension id="com.ti.ccstudio.errorparser.LinkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                </extensions>
-            </storageModule>
-            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-                <configuration artifactExtension="xe674" artifactName="AWR1843_MMR_dss_version_1" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485" name="Debug" parent="com.ti.ccstudio.buildDefinitions.C6000.Debug" postbuildStep="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/out2rprc/out2rprc.exe AWR1843_MMR_dss_version_1.xe674 AWR1843_MMR_dss_version_1.bin;" prebuildStep="rm -f ${PROJECT_ROOT}/AWR1843_MMR_dss_version_1.bin;">
-                    <folderInfo id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485." name="/" resourcePath="">
-                        <toolChain id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.DebugToolchain.1978503578" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerDebug.1703431364">
-                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.588286399" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
-                                <listOptionValue value="DEVICE_CONFIGURATION_ID=TMS320C67XX.AWR1843"/>
-                                <listOptionValue value="DEVICE_CORE_ID=C674X_0"/>
-                                <listOptionValue value="DEVICE_ENDIANNESS=little"/>
-                                <listOptionValue value="OUTPUT_FORMAT=ELF"/>
-                                <listOptionValue value="LINKER_COMMAND_FILE=dss_mmw_linker.cmd"/>
-                                <listOptionValue value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
-                                <listOptionValue value="CCS_MBS_VERSION=70.0.0"/>
-                                <listOptionValue value="PRODUCTS=com.ti.MMWAVE_SDK:3.5.0.04;sysconfig:1.23.0;"/>
-                                <listOptionValue value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.MMWAVE_SDK&quot;:[&quot;${COM_TI_MMWAVE_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARIES}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYMBOLS}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}&quot;],&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;]}"/>
-                                <listOptionValue value="OUTPUT_TYPE=executable"/>
-                            </option>
-                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1803478808" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="8.3.3" valueType="string"/>
-                            <targetPlatform id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformDebug.606670553" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformDebug"/>
-                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderDebug.1374422063" name="GNU Make.Debug" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderDebug"/>
-                            <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug">
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION.178624121" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION" value="6740" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.1825138729" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.eabi" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.1355407365" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.169918182" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.5" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.855785226" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.0" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH.494782340" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH" valueType="includePath">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INCLUDE_PATH}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
-                                    <listOptionValue value="C:\ti\dsplib_c674x_3_4_0_0\packages\ti\dsplib\src\DSPF_sp_fftSPxSP\c674"/>
-                                    <listOptionValue value="${PROJECT_ROOT}"/>
-                                    <listOptionValue value="${PROJECT_ROOT}\..\common_files"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages"/>
-                                    <listOptionValue value="${TI_MATHLIB_BASE}/packages"/>
-                                    <listOptionValue value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft16x16/c64P"/>
-                                    <listOptionValue value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft32x32/c64P"/>
-                                    <listOptionValue value="${PROJECT_LOC}/osal_nonos"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/include"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE.1230822290" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE" valueType="definedSymbols">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_SYMBOLS}"/>
-                                    <listOptionValue value="SOC_XWR18XX"/>
-                                    <listOptionValue value="SUBSYS_DSS"/>
-                                    <listOptionValue value="DOWNLOAD_FROM_CCS"/>
-                                    <listOptionValue value="_LITTLE_ENDIAN"/>
-                                    <listOptionValue value="DebugP_ASSERT_ENABLED"/>
-                                    <listOptionValue value="MMWAVE_L3RAM_NUM_BANK=8"/>
-                                    <listOptionValue value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
-                                    <listOptionValue value="GTRACK_2D"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.2017685723" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC.1398288027" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE.630035007" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING.1545200467" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING" valueType="stringList">
-                                    <listOptionValue value="225"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.1027477690" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER.2063504215" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.327423637" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP.860328857" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION.1542531284" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION" value=".oe674" valueType="string"/>
-                            </tool>
-                            <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerDebug.1703431364" name="C6000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerDebug">
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE.396487311" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE" value="0x800" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE.155413395" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE" value="0x2000" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE.1045105793" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE" value="AWR1843_MMR_dss_version_1.map" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE.347021526" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE" value="AWR1843_MMR_dss_version_1.xe674" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY.11771831" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY" valueType="libs">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARIES}"/>
-                                    <listOptionValue value="C:\ti\dsplib_c674x_3_4_0_0\packages\ti\dsplib\lib\dsplib.lib"/>
-                                    <listOptionValue value="libgtrack2D.ae674"/>
-                                    <listOptionValue value="mathlib.ae674"/>
-                                    <listOptionValue value="dsplib.ae64P"/>
-                                    <listOptionValue value="libsoc_xwr18xx.ae674"/>
-                                    <listOptionValue value="libcrc_xwr18xx.ae674"/>
-                                    <listOptionValue value="libmailbox_xwr18xx.ae674"/>
-                                    <listOptionValue value="libmmwavelink_xwr18xx.ae674"/>
-                                    <listOptionValue value="libedma_xwr18xx.ae674"/>
-                                    <listOptionValue value="libadcbuf_xwr18xx.ae674"/>
-                                    <listOptionValue value="libmmwavealg_xwr18xx.ae674"/>
-                                    <listOptionValue value="libhsiheader_xwr18xx.ae674"/>
-                                    <listOptionValue value="libcbuff_xwr18xx.ae674"/>
-                                    <listOptionValue value="rts6740_elf.lib"/>
-                                    <listOptionValue value="libc.a"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH.1009187350" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH" valueType="libPaths">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_LIBRARY_PATH}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/lib"/>
-                                    <listOptionValue value="${PROJECT_ROOT}"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwavelink/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/crc/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/mailbox/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/cbuff/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/soc/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/edma/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/adcbuf/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/alg/mmwavelib/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/hsiheader/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/alg/gtrack/lib"/>
-                                    <listOptionValue value="${TI_DSPLIB_BASE}/packages/ti/dsplib/lib"/>
-                                    <listOptionValue value="${TI_MATHLIB_BASE}/packages/ti/mathlib/lib"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/include"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE.86897943" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE" valueType="definedSymbols">
-                                    <listOptionValue value="SOC_XWR18XX"/>
-                                    <listOptionValue value="MMWAVE_L3RAM_NUM_BANK=8"/>
-                                    <listOptionValue value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING.1695908660" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING" valueType="stringList">
-                                    <listOptionValue value="225"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.1777192134" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER.473712249" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO.140836301" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO" value="AWR1843_MMR_dss_linkInfo.xml" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.1654843428" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.RAM_MODEL" valueType="enumerated"/>
-                            </tool>
-                            <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex.233666348" name="C6000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex"/>
-                            <tool id="com.ti.ccstudio.buildDefinitions.sysConfig.391528795" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
-                                <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.918906842" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
-                                </option>
-                            </tool>
-                        </toolChain>
-                    </folderInfo>
-                    <fileInfo id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485.dss_main.c" name="dss_main.c" rcbsApplicability="disable" resourcePath="dss_main.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.637372386">
-                        <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.637372386" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973">
-                            <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.401864674" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.off" valueType="enumerated"/>
-                            <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.745946280" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
-                        </tool>
-                    </fileInfo>
-                    <fileInfo id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485.dss_data_path.c" name="dss_data_path.c" rcbsApplicability="disable" resourcePath="dss_data_path.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.1620102692">
-                        <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.1620102692" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973">
-                            <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.1507804622" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.off" valueType="enumerated"/>
-                            <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.681386195" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
-                        </tool>
-                    </fileInfo>
-                    <sourceEntries>
-                        <entry excluding="xwr1843_C674x.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-                    </sourceEntries>
-                </configuration>
-            </storageModule>
-            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
-        </cconfiguration>
-        <cconfiguration id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927">
-            <storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927" moduleId="org.eclipse.cdt.core.settings" name="Release">
-                <macros>
-                    <stringMacro name="ORIGINAL_PROJECT_ROOT" type="VALUE_PATH_ANY" value="C:/Users/caffi/Desktop/Dottorato/Codice Sara AWR1642/DMA_catenaria_AWR1642_perMattia/DMA_catenaria_AWR1642_perMattia/firmware/AWR16xx_dss_nonOS_catenaria"/>
-                    <stringMacro name="TI_DSPLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/dsplib_c64Px_3_4_0_0"/>
-                    <stringMacro name="TI_MATHLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/mathlib_c674x_3_1_2_1"/>
-                </macros>
-                <externalSettings/>
-                <extensions>
-                    <extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
-                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
-                    <extension id="com.ti.ccs.errorparser.CompilerErrorParser_TI" point="com.ti.ccs.project.ErrorParser"/>
-                    <extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
-                    <extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    <extension id="com.ti.ccstudio.errorparser.CoffErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    <extension id="com.ti.ccstudio.errorparser.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                    <extension id="com.ti.ccstudio.errorparser.LinkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
-                </extensions>
-            </storageModule>
-            <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-                <configuration artifactExtension="xe674" artifactName="xwr16xx_mmw_dss_nonOS" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927" name="Release" parent="com.ti.ccstudio.buildDefinitions.C6000.Release" postbuildStep="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/xwr16xx/out2rprc/out2rprc.exe xwr16xx_mmw_dss_nonOS.xe674 xwr16xx_mmw_dss_nonOS.bin;" prebuildStep="rm -f ${PROJECT_ROOT}/xwr16xx_mmw_dss_nonOS.bin;">
-                    <folderInfo id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927." name="/" resourcePath="">
-                        <toolChain id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.ReleaseToolchain.1092987422" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerRelease.946087188">
-                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.342626722" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
-                                <listOptionValue value="DEVICE_CONFIGURATION_ID=TMS320C67XX.AWR1843"/>
-                                <listOptionValue value="DEVICE_CORE_ID="/>
-                                <listOptionValue value="DEVICE_ENDIANNESS=little"/>
-                                <listOptionValue value="OUTPUT_FORMAT=ELF"/>
-                                <listOptionValue value="LINKER_COMMAND_FILE=xwr1843_C674x.cmd"/>
-                                <listOptionValue value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
-                                <listOptionValue value="CCS_MBS_VERSION=70.0.0"/>
-                                <listOptionValue value="PRODUCTS=com.ti.MMWAVE_SDK:2.0.0.04;sysconfig:1.23.0;"/>
-                                <listOptionValue value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.MMWAVE_SDK&quot;:[&quot;${COM_TI_MMWAVE_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARIES}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYMBOLS}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}&quot;],&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;]}"/>
-                                <listOptionValue value="OUTPUT_TYPE=executable"/>
-                            </option>
-                            <option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1736996625" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="8.3.3" valueType="string"/>
-                            <targetPlatform id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformRelease.741520080" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformRelease"/>
-                            <builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderRelease.973817414" name="GNU Make.Release" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderRelease"/>
-                            <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerRelease.1414531588" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerRelease">
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION.651345520" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION" value="6740" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.2026395121" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.eabi" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.release.503643635" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.release" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.815310956" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.0" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH.355762593" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH" valueType="includePath">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INCLUDE_PATH}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
-                                    <listOptionValue value="${PROJECT_ROOT}"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages"/>
-                                    <listOptionValue value="${TI_MATHLIB_BASE}/packages"/>
-                                    <listOptionValue value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft16x16/c64P"/>
-                                    <listOptionValue value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft32x32/c64P"/>
-                                    <listOptionValue value="${PROJECT_LOC}/osal_nonos"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/include"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.1908248862" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC.532726516" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE.1085492206" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE.979326980" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE" valueType="definedSymbols">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_SYMBOLS}"/>
-                                    <listOptionValue value="SOC_XWR16XX"/>
-                                    <listOptionValue value="SUBSYS_DSS"/>
-                                    <listOptionValue value="MMWAVE_L3RAM_SIZE=0xC0000"/>
-                                    <listOptionValue value="DOWNLOAD_FROM_CCS"/>
-                                    <listOptionValue value="_LITTLE_ENDIAN"/>
-                                    <listOptionValue value="DebugP_ASSERT_ENABLED"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.606942646" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING.42577735" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING" valueType="stringList">
-                                    <listOptionValue value="225"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER.1929774826" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.384151751" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP.1523782313" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION.159455401" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION" value=".oe674" valueType="string"/>
-                            </tool>
-                            <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerRelease.946087188" name="C6000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerRelease">
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE.225402545" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE" value="0x800" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE.1739197529" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE" value="0x800" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE.1729115946" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE" value="xwr16xx_mmw_dss_nonOS.map" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE.128717468" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE" value="xwr16xx_mmw_dss_nonOS.xe674" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY.58917011" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY" valueType="libs">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARIES}"/>
-                                    <listOptionValue value="mathlib.ae674"/>
-                                    <listOptionValue value="dsplib.ae64P"/>
-                                    <listOptionValue value="libsoc_xwr16xx.ae674"/>
-                                    <listOptionValue value="libcrc_xwr16xx.ae674"/>
-                                    <listOptionValue value="libmailbox_xwr16xx.ae674"/>
-                                    <listOptionValue value="libmmwavelink_xwr16xx.ae674"/>
-                                    <listOptionValue value="libedma_xwr16xx.ae674"/>
-                                    <listOptionValue value="libadcbuf_xwr16xx.ae674"/>
-                                    <listOptionValue value="libmmwavealg_xwr16xx.ae674"/>
-                                    <listOptionValue value="libhsiheader_xwr16xx.ae674"/>
-                                    <listOptionValue value="libcbuff_xwr16xx.ae674"/>
-                                    <listOptionValue value="rts6740_elf.lib"/>
-                                    <listOptionValue value="libc.a"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH.418839604" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH" valueType="libPaths">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_LIBRARY_PATH}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/lib"/>
-                                    <listOptionValue value="${PROJECT_ROOT}"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwavelink/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/crc/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/mailbox/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/cbuff/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/soc/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/edma/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/adcbuf/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/alg/mmwavelib/lib"/>
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/hsiheader/lib"/>
-                                    <listOptionValue value="${TI_DSPLIB_BASE}/packages/ti/dsplib/lib"/>
-                                    <listOptionValue value="${TI_MATHLIB_BASE}/packages/ti/mathlib/lib"/>
-                                    <listOptionValue value="${CG_TOOL_ROOT}/include"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE.74953104" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE" valueType="definedSymbols">
-                                    <listOptionValue value="MMWAVE_L3RAM_SIZE=0xC0000"/>
-                                    <listOptionValue value="SOC_XWR16XX"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.1834404880" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING.760742151" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING" valueType="stringList">
-                                    <listOptionValue value="225"/>
-                                </option>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER.743860509" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO.2106748208" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO" value="xwr16xx_${ProjName}_linkInfo.xml" valueType="string"/>
-                                <option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.565614039" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.RAM_MODEL" valueType="enumerated"/>
-                            </tool>
-                            <tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex.553116383" name="C6000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex"/>
-                            <tool id="com.ti.ccstudio.buildDefinitions.sysConfig.1021411174" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
-                                <option id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.192154249" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
-                                    <listOptionValue value="${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}"/>
-                                    <listOptionValue value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
-                                </option>
-                            </tool>
-                        </toolChain>
-                    </folderInfo>
-                    <sourceEntries>
-                        <entry excluding="dss_mmw_linker.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
-                    </sourceEntries>
-                </configuration>
-            </storageModule>
-            <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
-        </cconfiguration>
-    </storageModule>
-    <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
-    <storageModule moduleId="cdtBuildSystem" version="4.0.0">
-        <project id="AWR16xx_dss_nonOS.com.ti.ccstudio.buildDefinitions.C6000.ProjectType.1835677076" name="C6000" projectType="com.ti.ccstudio.buildDefinitions.C6000.ProjectType"/>
-    </storageModule>
-    <storageModule moduleId="scannerConfiguration"/>
-    <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+	<storageModule configRelations="2" moduleId="org.eclipse.cdt.core.settings">
+		<cconfiguration id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485" moduleId="org.eclipse.cdt.core.settings" name="Debug">
+				<macros>
+					<stringMacro name="ORIGINAL_PROJECT_ROOT" type="VALUE_PATH_ANY" value="C:/Users/caffi/Desktop/Dottorato/Codice Sara AWR1642/DMA_catenaria_AWR1642_perMattia/DMA_catenaria_AWR1642_perMattia/firmware/AWR16xx_dss_nonOS_catenaria"/>
+					<stringMacro name="TI_DSPLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/dsplib_c64Px_3_4_0_0"/>
+					<stringMacro name="TI_MATHLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/mathlib_c674x_3_1_2_1"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+					<extension id="com.ti.ccs.errorparser.CompilerErrorParser_TI" point="com.ti.ccs.project.ErrorParser"/>
+					<extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.CoffErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.LinkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.SysConfigErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="xe674" artifactName="AWR1843_MMR_dss_version_1" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485" name="Debug" parent="com.ti.ccstudio.buildDefinitions.C6000.Debug" postbuildStep="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/out2rprc/out2rprc.exe AWR1843_MMR_dss_version_1.xe674 AWR1843_MMR_dss_version_1.bin;" prebuildStep="">
+					<folderInfo id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485." name="/" resourcePath="">
+						<toolChain id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.DebugToolchain.1978503578" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerDebug.1703431364">
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.588286399" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+								<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=TMS320C67XX.AWR1843"/>
+								<listOptionValue builtIn="false" value="DEVICE_CORE_ID=C674X_0"/>
+								<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+								<listOptionValue builtIn="false" value="OUTPUT_FORMAT=ELF"/>
+								<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=dss_mmw_linker.cmd"/>
+								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=70.0.0"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=com.ti.MMWAVE_SDK:3.5.0.04;sysconfig:1.23.0;"/>
+								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.MMWAVE_SDK&quot;:[&quot;${COM_TI_MMWAVE_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARIES}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYMBOLS}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}&quot;],&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;]}"/>
+								<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+							</option>
+							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1803478808" name="Compiler version" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="8.3.3" valueType="string"/>
+							<targetPlatform id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformDebug.606670553" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformDebug"/>
+							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderDebug.1374422063" keepEnvironmentInBuildfile="false" managedBuildOn="true" name="GNU Make" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderDebug"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug">
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION.178624121" name="Target processor version (--silicon_version, -mv)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION" value="6740" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.1825138729" name="Application binary interface (coffabi not supported) (--abi)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.eabi" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.1355407365" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.169918182" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.5" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.855785226" name="Optimize for code size (--opt_for_space, -ms)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.0" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH.494782340" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH" valueType="includePath">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="C:\ti\dsplib_c674x_3_4_0_0\packages\ti\dsplib\src\DSPF_sp_fftSPxSP\c674"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}\..\common_files"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages"/>
+									<listOptionValue builtIn="false" value="${TI_MATHLIB_BASE}/packages"/>
+									<listOptionValue builtIn="false" value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft16x16/c64P"/>
+									<listOptionValue builtIn="false" value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft32x32/c64P"/>
+									<listOptionValue builtIn="false" value="${PROJECT_LOC}/osal_nonos"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE.1230822290" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="SOC_XWR18XX"/>
+									<listOptionValue builtIn="false" value="SUBSYS_DSS"/>
+									<listOptionValue builtIn="false" value="DOWNLOAD_FROM_CCS"/>
+									<listOptionValue builtIn="false" value="_LITTLE_ENDIAN"/>
+									<listOptionValue builtIn="false" value="DebugP_ASSERT_ENABLED"/>
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=8"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
+									<listOptionValue builtIn="false" value="GTRACK_2D"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.2017685723" name="Debugging model" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC.1398288027" name="Enable support for GCC extensions (DEPRECATED) (--gcc)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE.630035007" name="Continue compilation after using -pp&lt;X&gt; options. (--preproc_with_compile, -ppa)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING.1545200467" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.1027477690" name="Wrap diagnostic messages (--diag_wrap)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER.2063504215" name="Emit diagnostic identifier numbers (--display_error_number, -pden)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.327423637" name="Place each function in a separate subsection (--gen_func_subsections, -mo)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP.860328857" name="Disable push-pop optimization. (--disable_push_pop)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION.1542531284" name="Extension for object files (default is .obj) (--obj_extension, -eo)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION" value=".oe674" valueType="string"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS.1383675459" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS.2089242232" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS.320341373" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS.1502034669" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerDebug.1703431364" name="C6000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerDebug">
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE.396487311" name="Set C system stack size (--stack_size, -stack)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE.155413395" name="Heap size for C/C++ dynamic memory allocation (--heap_size, -heap)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE" value="0x2000" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE.1045105793" name="Link information (map) listed into &lt;file&gt; (--map_file, -m)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE" value="AWR1843_MMR_dss_version_1.map" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE.347021526" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE" value="AWR1843_MMR_dss_version_1.xe674" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY.11771831" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY" valueType="libs">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="C:\ti\dsplib_c674x_3_4_0_0\packages\ti\dsplib\lib\dsplib.lib"/>
+									<listOptionValue builtIn="false" value="libgtrack2D.ae674"/>
+									<listOptionValue builtIn="false" value="mathlib.ae674"/>
+									<listOptionValue builtIn="false" value="dsplib.ae64P"/>
+									<listOptionValue builtIn="false" value="libsoc_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libcrc_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmailbox_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavelink_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libedma_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libadcbuf_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavealg_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libhsiheader_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="libcbuff_xwr18xx.ae674"/>
+									<listOptionValue builtIn="false" value="rts6740_elf.lib"/>
+									<listOptionValue builtIn="false" value="libc.a"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH.1009187350" name="Add &lt;dir&gt; to library search path (--search_path, -i)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH" valueType="libPaths">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/lib"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwavelink/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/crc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/mailbox/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/cbuff/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/soc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/edma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/adcbuf/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/alg/mmwavelib/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/hsiheader/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/alg/gtrack/lib"/>
+									<listOptionValue builtIn="false" value="${TI_DSPLIB_BASE}/packages/ti/dsplib/lib"/>
+									<listOptionValue builtIn="false" value="${TI_MATHLIB_BASE}/packages/ti/mathlib/lib"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE.86897943" name="Pre-define preprocessor macro _name_ to _value_ (--define)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="SOC_XWR18XX"/>
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_NUM_BANK=8"/>
+									<listOptionValue builtIn="false" value="MMWAVE_SHMEM_BANK_SIZE=0x20000"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING.1695908660" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.1777192134" name="Wrap diagnostic messages (--diag_wrap)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER.473712249" name="Emit diagnostic identifier numbers (--display_error_number)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO.140836301" name="Detailed link information data-base into &lt;file&gt; (--xml_link_info, -xml_link_info)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO" value="AWR1843_MMR_dss_linkInfo.xml" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.1654843428" name="Initialization model" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.RAM_MODEL" valueType="enumerated"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD_SRCS.1762258873" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD2_SRCS.1028894608" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD2_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__GEN_CMDS.1308565767" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__GEN_CMDS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex.233666348" name="C6000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.sysConfig.391528795" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.918906842" name="Root system config meta data file in a product or SDK (-s, --product)" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
+								</option>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<fileInfo id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485.dss_main.c" name="dss_main.c" rcbsApplicability="disable" resourcePath="dss_main.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.637372386">
+						<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.637372386" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973">
+							<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.401864674" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.off" valueType="enumerated"/>
+							<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.745946280" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS.296253046" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS.752869940" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS.1485420509" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS.1925941898" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS"/>
+						</tool>
+					</fileInfo>
+					<fileInfo id="com.ti.ccstudio.buildDefinitions.C6000.Debug.154245485.dss_data_path.c" name="dss_data_path.c" rcbsApplicability="disable" resourcePath="dss_data_path.c" toolsToInvoke="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.1620102692">
+						<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973.1620102692" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerDebug.1516290973">
+							<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.1507804622" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.off" valueType="enumerated"/>
+							<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.681386195" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS.2048447643" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS.1146245558" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS.1303954586" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS"/>
+							<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS.194772831" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS"/>
+						</tool>
+					</fileInfo>
+					<sourceEntries>
+						<entry excluding="xwr1843_C674x.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+		<cconfiguration id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927">
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927" moduleId="org.eclipse.cdt.core.settings" name="Release">
+				<macros>
+					<stringMacro name="ORIGINAL_PROJECT_ROOT" type="VALUE_PATH_ANY" value="C:/Users/caffi/Desktop/Dottorato/Codice Sara AWR1642/DMA_catenaria_AWR1642_perMattia/DMA_catenaria_AWR1642_perMattia/firmware/AWR16xx_dss_nonOS_catenaria"/>
+					<stringMacro name="TI_DSPLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/dsplib_c64Px_3_4_0_0"/>
+					<stringMacro name="TI_MATHLIB_BASE" type="VALUE_PATH_ANY" value="${TI_PRODUCTS_DIR__TIREX}/mathlib_c674x_3_1_2_1"/>
+				</macros>
+				<externalSettings/>
+				<extensions>
+					<extension id="com.ti.ccstudio.binaryparser.CoffParser" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+					<extension id="com.ti.ccs.errorparser.CompilerErrorParser_TI" point="com.ti.ccs.project.ErrorParser"/>
+					<extension id="com.ti.ccs.errorparser.SysConfigErrorParser" point="com.ti.ccs.project.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.CoffErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.AsmErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.LinkErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="com.ti.ccstudio.errorparser.SysConfigErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration artifactExtension="xe674" artifactName="xwr16xx_mmw_dss_nonOS" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927" name="Release" parent="com.ti.ccstudio.buildDefinitions.C6000.Release" postbuildStep="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/scripts/ImageCreator/xwr16xx/out2rprc/out2rprc.exe xwr16xx_mmw_dss_nonOS.xe674 xwr16xx_mmw_dss_nonOS.bin;" prebuildStep="rm -f ${PROJECT_ROOT}/xwr16xx_mmw_dss_nonOS.bin;">
+					<folderInfo id="com.ti.ccstudio.buildDefinitions.C6000.Release.999996927." name="/" resourcePath="">
+						<toolChain id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.ReleaseToolchain.1092987422" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.ReleaseToolchain" targetTool="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerRelease.946087188">
+							<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.342626722" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
+								<listOptionValue builtIn="false" value="DEVICE_CONFIGURATION_ID=TMS320C67XX.AWR1843"/>
+								<listOptionValue builtIn="false" value="DEVICE_CORE_ID="/>
+								<listOptionValue builtIn="false" value="DEVICE_ENDIANNESS=little"/>
+								<listOptionValue builtIn="false" value="OUTPUT_FORMAT=ELF"/>
+								<listOptionValue builtIn="false" value="LINKER_COMMAND_FILE=xwr1843_C674x.cmd"/>
+								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=libc.a"/>
+								<listOptionValue builtIn="false" value="CCS_MBS_VERSION=70.0.0"/>
+								<listOptionValue builtIn="false" value="PRODUCTS=com.ti.MMWAVE_SDK:2.0.0.04;sysconfig:1.23.0;"/>
+								<listOptionValue builtIn="false" value="PRODUCT_MACRO_IMPORTS={&quot;com.ti.MMWAVE_SDK&quot;:[&quot;${COM_TI_MMWAVE_SDK_INCLUDE_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARY_PATH}&quot;,&quot;${COM_TI_MMWAVE_SDK_LIBRARIES}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYMBOLS}&quot;,&quot;${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}&quot;],&quot;sysconfig&quot;:[&quot;${SYSCONFIG_TOOL_INCLUDE_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARY_PATH}&quot;,&quot;${SYSCONFIG_TOOL_LIBRARIES}&quot;,&quot;${SYSCONFIG_TOOL_SYMBOLS}&quot;,&quot;${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}&quot;]}"/>
+								<listOptionValue builtIn="false" value="OUTPUT_TYPE=executable"/>
+							</option>
+							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION.1736996625" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_CODEGEN_VERSION" value="8.3.3" valueType="string"/>
+							<targetPlatform id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformRelease.741520080" name="Platform" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.targetPlatformRelease"/>
+							<builder buildPath="${BuildDirectory}" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderRelease.973817414" name="GNU Make.Release" parallelBuildOn="true" parallelizationNumber="optimal" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.builderRelease"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerRelease.1414531588" name="C6000 Compiler" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.compilerRelease">
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION.651345520" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.SILICON_VERSION" value="6740" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.2026395121" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.ABI.eabi" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.release.503643635" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.release" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.815310956" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OPT_FOR_SPACE.0" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH.355762593" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.INCLUDE_PATH" valueType="includePath">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_INCLUDE_PATH}"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages"/>
+									<listOptionValue builtIn="false" value="${TI_MATHLIB_BASE}/packages"/>
+									<listOptionValue builtIn="false" value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft16x16/c64P"/>
+									<listOptionValue builtIn="false" value="${TI_DSPLIB_BASE}/packages/ti/dsplib/src/DSP_fft32x32/c64P"/>
+									<listOptionValue builtIn="false" value="${PROJECT_LOC}/osal_nonos"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.1908248862" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC.532726516" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GCC" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE.1085492206" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.PREPROC_WITH_COMPILE" value="true" valueType="boolean"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE.979326980" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYMBOLS}"/>
+									<listOptionValue builtIn="false" value="SOC_XWR16XX"/>
+									<listOptionValue builtIn="false" value="SUBSYS_DSS"/>
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_SIZE=0xC0000"/>
+									<listOptionValue builtIn="false" value="DOWNLOAD_FROM_CCS"/>
+									<listOptionValue builtIn="false" value="_LITTLE_ENDIAN"/>
+									<listOptionValue builtIn="false" value="DebugP_ASSERT_ENABLED"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.606942646" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING.42577735" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DIAG_WARNING" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER.1929774826" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.384151751" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.GEN_FUNC_SUBSECTIONS.on" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP.1523782313" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.DISABLE_PUSH_POP" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION.159455401" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compilerID.OBJ_EXTENSION" value=".oe674" valueType="string"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS.1855726664" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__C_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS.466838421" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__CPP_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS.1787587308" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS.1096313322" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.compiler.inputType__ASM2_SRCS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerRelease.946087188" name="C6000 Linker" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exe.linkerRelease">
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE.225402545" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.STACK_SIZE" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE.1739197529" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.HEAP_SIZE" value="0x800" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE.1729115946" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.MAP_FILE" value="xwr16xx_mmw_dss_nonOS.map" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE.128717468" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.OUTPUT_FILE" value="xwr16xx_mmw_dss_nonOS.xe674" valueType="string"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY.58917011" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.LIBRARY" valueType="libs">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_LIBRARIES}"/>
+									<listOptionValue builtIn="false" value="mathlib.ae674"/>
+									<listOptionValue builtIn="false" value="dsplib.ae64P"/>
+									<listOptionValue builtIn="false" value="libsoc_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libcrc_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmailbox_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavelink_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libedma_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libadcbuf_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libmmwavealg_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libhsiheader_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="libcbuff_xwr16xx.ae674"/>
+									<listOptionValue builtIn="false" value="rts6740_elf.lib"/>
+									<listOptionValue builtIn="false" value="libc.a"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH.418839604" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.SEARCH_PATH" valueType="libPaths">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_LIBRARY_PATH}"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/lib"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/control/mmwavelink/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/crc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/mailbox/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/cbuff/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/soc/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/edma/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/drivers/adcbuf/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/alg/mmwavelib/lib"/>
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_INSTALL_DIR}/packages/ti/utils/hsiheader/lib"/>
+									<listOptionValue builtIn="false" value="${TI_DSPLIB_BASE}/packages/ti/dsplib/lib"/>
+									<listOptionValue builtIn="false" value="${TI_MATHLIB_BASE}/packages/ti/mathlib/lib"/>
+									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+								</option>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE.74953104" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DEFINE" valueType="definedSymbols">
+									<listOptionValue builtIn="false" value="MMWAVE_L3RAM_SIZE=0xC0000"/>
+									<listOptionValue builtIn="false" value="SOC_XWR16XX"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.1834404880" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WRAP.off" valueType="enumerated"/>
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING.760742151" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DIAG_WARNING" valueType="stringList">
+									<listOptionValue builtIn="false" value="225"/>
+								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER.743860509" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.DISPLAY_ERROR_NUMBER" value="true" valueType="boolean"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO.2106748208" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.XML_LINK_INFO" value="xwr16xx_${ProjName}_linkInfo.xml" valueType="string"/>
+								<option id="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.565614039" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL" value="com.ti.ccstudio.buildDefinitions.C6000_8.3.linkerID.INITIALIZATION_MODEL.RAM_MODEL" valueType="enumerated"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD_SRCS.462963074" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD2_SRCS.1133478742" name="Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__CMD2_SRCS"/>
+								<inputType id="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__GEN_CMDS.1107583117" name="Generated Linker Command Files" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.exeLinker.inputType__GEN_CMDS"/>
+							</tool>
+							<tool id="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex.553116383" name="C6000 Hex Utility" superClass="com.ti.ccstudio.buildDefinitions.C6000_8.3.hex"/>
+							<tool id="com.ti.ccstudio.buildDefinitions.sysConfig.1021411174" name="SysConfig" superClass="com.ti.ccstudio.buildDefinitions.sysConfig">
+								<option IS_BUILTIN_EMPTY="false" IS_VALUE_EMPTY="false" id="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS.192154249" superClass="com.ti.ccstudio.buildDefinitions.sysConfig.PRODUCTS" valueType="stringList">
+									<listOptionValue builtIn="false" value="${COM_TI_MMWAVE_SDK_SYSCONFIG_MANIFEST}"/>
+									<listOptionValue builtIn="false" value="${SYSCONFIG_TOOL_SYSCONFIG_MANIFEST}"/>
+								</option>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<sourceEntries>
+						<entry excluding="dss_mmw_linker.cmd" flags="VALUE_WORKSPACE_PATH|RESOLVED" kind="sourcePath" name=""/>
+					</sourceEntries>
+				</configuration>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="AWR16xx_dss_nonOS.com.ti.ccstudio.buildDefinitions.C6000.ProjectType.1835677076" name="C6000" projectType="com.ti.ccstudio.buildDefinitions.C6000.ProjectType"/>
+	</storageModule>
+	<storageModule moduleId="scannerConfiguration"/>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
 </cproject>

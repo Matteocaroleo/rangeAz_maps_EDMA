@@ -953,7 +953,7 @@ void _MmwDemo_mssAssert(int32_t expression, const char *file, int32_t line)
  *  @n
  *      Entry point into the Millimeter Wave Demo
  *
- *  @retval
+ *  @retvala
  *      Not Applicable.
  */
 int main (void)
