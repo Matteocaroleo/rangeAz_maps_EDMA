@@ -869,6 +869,7 @@ void MmwDemo_printHeapStats(char *name, uint32_t heapUsed, uint32_t heapSize)
 void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBufAddress)
 {
 
+//Allinea il valore x al multiplo più vicino di a che è maggiore o uguale a x
 #define ALIGN(x,a)  (((x)+((a)-1))&~((a)-1))
 
 #define MMW_ALLOC_BUF(name, nameType, startAddr, alignment, size) \
@@ -929,7 +930,7 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
     MMW_ALLOC_BUF(fftOut2D, int16_t,
                   window1D_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
                   2 * obj->numRxAntennas * obj->numRangeBinsCalc);
-
+    ////////////////////////////////////////////////////////////////////
 
 
 
@@ -964,6 +965,12 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
                   pRangeProfileCplx_end, sizeof(cmplx16ReIm_t),
                   obj->numAdcSamples * obj->numRxAntennas * obj->numChirpsProc);
 
+    ////////////////////////////////// AGGIUNTO //////////////////////////////////
+    MMW_ALLOC_BUF(rangeAzMap, cmplx16ReIm_t,
+                  adcDataCube_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
+                  obj->numRangeBinsCalc * obj->numChirpsPerFrame * obj->numRxAntennas *
+                  obj->numTxAntennas);
+    ////////////////////////////////// //////////////////////////////////
 
 #if BASIC_PROCESSING_ENA == 1
 
