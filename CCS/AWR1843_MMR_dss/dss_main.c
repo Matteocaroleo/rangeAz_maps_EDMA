@@ -684,15 +684,14 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
     if (obj->transmitAdcData == 1){
 
         /* Heatmap data */
-        itemPayloadLen = obj->numAzBinsCalc*obj->numRxAntennas *
-                obj->numChirpsProc*sizeof(cmplx16ReIm_t);
+        itemPayloadLen = obj->numAzBinsCalc*sizeof(cmplx16ReIm_t);
         totalHsmSize += itemPayloadLen;
         if(totalHsmSize > outputBufSize)
         {
             printf("too many output data!");
             return -1;
         }
-        memcpy(ptrCurrBuffer, (void *)obj->adcDataCube, itemPayloadLen);
+        memcpy(ptrCurrBuffer, (void *)obj->rangeAzMap, itemPayloadLen);
 
         message.body.detObj.tlv[tlvIdx].length = itemPayloadLen;
         message.body.detObj.tlv[tlvIdx].type = MMWDEMO_OUTPUT_MSG_ADC_DATA;
