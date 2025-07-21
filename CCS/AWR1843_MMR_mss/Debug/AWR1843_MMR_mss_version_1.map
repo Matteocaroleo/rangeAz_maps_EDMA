@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker PC v16.9.6                     
 ******************************************************************************
->> Linked Sun Jul 20 23:05:23 2025
+>> Linked Mon Jul 21 18:47:32 2025
 
 OUTPUT FILE NAME:   <AWR1843_MMR_mss_version_1.xer4f>
 ENTRY POINT SYMBOL: "_c_int00"  address: 00007830
@@ -381,36 +381,36 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     4180    0         2225   
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/dma/lib/libDMA_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/dma/lib/libDMA_xwr18xx.aer4f
        dma.oer4f                  1978    0         0      
     +--+--------------------------+-------+---------+---------+
        Total:                     1978    0         0      
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/esm/lib/libesm_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/esm/lib/libesm_xwr18xx.aer4f
        esm.oer4f                  456     0         112    
        esm_xwr1xxx.oer4f          0       0         12     
     +--+--------------------------+-------+---------+---------+
        Total:                     456     0         124    
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/gpio/lib/libgpio_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/gpio/lib/libgpio_xwr18xx.aer4f
        gpio.oer4f                 886     0         404    
        gpio_xwr18xx.oer4f         0       0         8      
     +--+--------------------------+-------+---------+---------+
        Total:                     886     0         412    
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/mailbox/lib/libmailbox_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/mailbox/lib/libmailbox_xwr18xx.aer4f
        mailbox.oer4f              1712    36        80     
        mailbox_xwr18xx.oer4f      0       0         48     
     +--+--------------------------+-------+---------+---------+
        Total:                     1712    36        128    
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/pinmux/lib/libpinmux_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/pinmux/lib/libpinmux_xwr18xx.aer4f
        pinmux.oer4f               390     0         0      
        pinmux_xwr1xxx.oer4f       0       0         4      
     +--+--------------------------+-------+---------+---------+
        Total:                     390     0         4      
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/lib/libsoc_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/soc/lib/libsoc_xwr18xx.aer4f
        soc_xwr18xx_mss.oer4f      1356    0         32     
        soc_xwr18xx.oer4f          322     0         64     
        soc.oer4f                  332     0         0      
@@ -418,7 +418,7 @@ MODULE SUMMARY
     +--+--------------------------+-------+---------+---------+
        Total:                     2192    0         96     
                                                            
-    C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/uart/lib/libuart_xwr18xx.aer4f
+    C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/uart/lib/libuart_xwr18xx.aer4f
        uartsci.oer4f              2192    0         40     
        uartsci_dma.oer4f          642     0         0      
        UART.oer4f                 160     60        4      

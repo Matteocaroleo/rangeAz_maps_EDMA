@@ -11,7 +11,7 @@ osal_nonos/interrupt.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/sys/_types.h
 osal_nonos/interrupt.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/machine/_types.h
 osal_nonos/interrupt.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/machine/_stdint.h
 osal_nonos/interrupt.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/sys/_stdint.h
-osal_nonos/interrupt.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/osal/debugP.h
+osal_nonos/interrupt.oe674: C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/osal/debugP.h
 osal_nonos/interrupt.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/stdbool.h
 osal_nonos/interrupt.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/stddef.h
 osal_nonos/interrupt.oe674: ../osal_nonos/hw_dspintc.h
@@ -40,7 +40,7 @@ C:/ti/ti-cgt-c6000_8.3.3/include/machine/_stdint.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/sys/_stdint.h:
 
-C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/osal/debugP.h:
+C:/ti/mmwave_sdk_03_05_00_04/packages/ti/drivers/osal/debugP.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/stdbool.h:
 

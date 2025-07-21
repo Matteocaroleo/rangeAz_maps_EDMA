@@ -418,9 +418,9 @@ uint32_t MmwDemo_pow2roundup (uint32_t x);
 
 ///////////////////////// AGGIUNTO ////////////////////
 void AzimuthProcess(MmwDemo_DSS_DataPathObj *obj, uint16_t azimuthIndx);
-void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongId)
+void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongId);
 void MmwDemo_dataPathWait2DOutputData(MmwDemo_DSS_DataPathObj *obj, uint32_t pingPongId);
-
+void MmwDemo_dataPathWait2DInputData(MmwDemo_DSS_DataPathObj *obj, uint32_t pingPongId);
 
 
 

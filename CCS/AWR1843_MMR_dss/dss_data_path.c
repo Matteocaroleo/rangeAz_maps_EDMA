@@ -706,15 +706,15 @@ void interFrameProcessing(MmwDemo_DSS_DataPathObj *obj)
 
     //- trasferimento ping pong CON TRASPOSTA
 
-
-
     //- fft in azimuth SU L2
 
     // heatmap?
 
     // ping pong su L3 per concludere
-
-
+    uint16_t chirpIndex=0;
+    for (chirpIndex=0; chirpIndex < obj-> numChirpsPerFrame ; chirpIndex++){
+        AzimuthProcess(obj,chirpIndex);
+    }
 
 
 
@@ -1001,7 +1001,7 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
     ////////////////////////////////////////////////////////////////
 
     ////////////////////////////////// AGGIUNTO //////////////////////
-    MMW_ALLOC_BUF(fftOut2D, int16_t,
+    MMW_ALLOC_BUF(fftOut2D, cmplx16ReIm_t,
                   window1D_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
                   2 * obj->numAzBinsCalc);
     ////////////////////////////////////////////////////////////////////
@@ -1462,9 +1462,10 @@ void AzimuthProcess(MmwDemo_DSS_DataPathObj *obj, uint16_t azimuthIndx)
 
 void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongId)
 {
-    uint32_t antIndx, waitingTime;
+    uint32_t waitingTime;
     volatile uint32_t startTime;
     volatile uint32_t startTime1;
+    uint16_t numRangeBinsIndex;
     MmwDemo_DSS_dataPathContext_t *context = obj->context;
 
     uint32_t radarCubeOffset=0;
@@ -1523,11 +1524,10 @@ void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongI
 
         // fft
         DSP_fft16x16(
-                (int16_t *) obj->twiddle16x16_1D,
+                (int16_t *) obj->twiddle16x16_2D,
                 obj->numRangeBinsCalc,
-                (int16_t *) &obj->adcDataIn[adcDataOffset],
-                (int16_t *) &obj->fftOut1D[chirpPingPongId * (obj->numRxAntennas * obj->numRangeBinsCalc) +
-                                               (obj->numRangeBinsCalc * antIndx)]);
+                (int16_t *) &obj->dataAzIn[radarCubeOffset],
+                (int16_t *) &obj->fftOut2D[chirpPingPongId * (obj->numRxAntennas * obj->numRangeBinsCalc) + (obj->numAzBinsCalc * numRangeBinsIndex)]);
     }
 
     gCycleLog.interChirpProcessingTime += Cycleprofiler_getTimeStamp() - startTime - waitingTime;
@@ -1562,3 +1562,37 @@ void MmwDemo_dataPathWait2DOutputData(MmwDemo_DSS_DataPathObj *obj, uint32_t pin
 
 }
 
+void MmwDemo_dataPathWait2DInputData(MmwDemo_DSS_DataPathObj *obj, uint32_t pingPongId)
+{
+    MmwDemo_DSS_dataPathContext_t *context = obj->context;
+
+#ifdef EDMA_1D_INPUT_BLOCKING
+    Bool       status;
+
+    status = Semaphore_pend(context->EDMA_1D_InputDone_semHandle[pingPongId], BIOS_WAIT_FOREVER);
+    if (status != TRUE)
+    {
+        printf("Error: Semaphore_pend returned %d\n",status);
+    }
+#else
+    /* wait until transfer done */
+    volatile bool isTransferDone;
+    uint8_t chId;
+    if(pingPongId == 0)
+    {
+        chId = MMW_EDMA_CH_2D_IN_PING;
+    }
+    else
+    {
+        chId = MMW_EDMA_CH_2D_IN_PONG;
+    }
+    do {
+        if (EDMA_isTransferComplete(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                                    chId,
+                                    (bool *)&isTransferDone) != EDMA_NO_ERROR)
+        {
+            MmwDemo_dssAssert(0);
+        }
+    } while (isTransferDone == false);
+#endif
+}

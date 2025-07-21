@@ -681,11 +681,10 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
 
     // OUR HEATMAP (Range-Azimuth)
 
-
     if (obj->transmitAdcData == 1){
 
-        /* Adc data */
-        itemPayloadLen = obj->numAdcSamples*obj->numRxAntennas *
+        /* Heatmap data */
+        itemPayloadLen = obj->numAzBinsCalc*obj->numRxAntennas *
                 obj->numChirpsProc*sizeof(cmplx16ReIm_t);
         totalHsmSize += itemPayloadLen;
         if(totalHsmSize > outputBufSize)
@@ -704,6 +703,30 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
         ptrCurrBuffer = (uint8_t *)((uint32_t)ptrHsmBuffer + totalHsmSize);
     }
 
+/* OLD CODE
+
+    if (obj->transmitAdcData == 1){
+
+        /* Adc data
+        itemPayloadLen = obj->numAdcSamples*obj->numRxAntennas *
+                obj->numChirpsProc*sizeof(cmplx16ReIm_t);
+        totalHsmSize += itemPayloadLen;
+        if(totalHsmSize > outputBufSize)
+        {
+            printf("too many output data!");
+            return -1;
+        }
+        memcpy(ptrCurrBuffer, (void *)obj->adcDataCube, itemPayloadLen);
+
+        message.body.detObj.tlv[tlvIdx].length = itemPayloadLen;
+        message.body.detObj.tlv[tlvIdx].type = MMWDEMO_OUTPUT_MSG_ADC_DATA;
+        message.body.detObj.tlv[tlvIdx].address = (uint32_t) ptrCurrBuffer;
+
+        tlvIdx++;
+        totalPacketLen += sizeof(MmwDemo_output_message_tl) + itemPayloadLen;
+        ptrCurrBuffer = (uint8_t *)((uint32_t)ptrHsmBuffer + totalHsmSize);
+    }
+*/
     /* Filling other info */
     message.body.detObj.header.numTLVs = tlvIdx;
     /* Round up packet length to multiple of MMWDEMO_OUTPUT_MSG_SEGMENT_LEN */
