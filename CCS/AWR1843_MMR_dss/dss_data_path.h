@@ -182,6 +182,8 @@ typedef struct MmwDemo_DSS_DataPathObj_t
     ////////////////////// AGGIUNTO ///////////////////
 
     /* AZIMUTH FFT */
+    /*! @brief twiddle table for 2D FFT */
+    cmplx16ReIm_t *twiddle16x16_2D;
     /*! @brief input for azimuth calculation ---> L1*/
     cmplx16ReIm_t *dataAzIn;
 

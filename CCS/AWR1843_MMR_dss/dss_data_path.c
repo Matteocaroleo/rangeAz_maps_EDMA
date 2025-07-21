@@ -1116,7 +1116,7 @@ void MmwDemo_dataPathConfigFFTs(MmwDemo_DSS_DataPathObj *obj)
     MmwDemo_gen_twiddle_fft16x16_fast((int16_t *)obj->twiddle16x16_1D, obj->numRangeBinsCalc);
 
     // GENERAZIONE TWIDDLE FACTOR PER AZIMUTH
-    MmwDemo_gen_twiddle_fft16x16_fast((int16_t *)obj->twiddle16x16_1D, obj->numAzBinsCalc);
+    MmwDemo_gen_twiddle_fft16x16_fast((int16_t *)obj->twiddle16x16_2D, obj->numAzBinsCalc);
 }
 
 
@@ -1467,59 +1467,59 @@ void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongI
     volatile uint32_t startTime1;
     MmwDemo_DSS_dataPathContext_t *context = obj->context;
 
-    uint32_t adcDataOffset;
+    uint32_t radarCubeOffset=0;
 
     waitingTime = 0;
     startTime = Cycleprofiler_getTimeStamp();
 
     // Start DMA transfer to fetch data from RX1
     EDMA_startDmaTransfer(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
-                       MMW_EDMA_CH_1D_IN_PING);
+                       MMW_EDMA_CH_2D_IN_PING);
 
     // 1d fft for first antenna, followed by kicking off the DMA of fft output
-    for (antIndx = 0; antIndx < obj->numRxAntennas; antIndx++)
+    for (numRangeBinsIndex = 0; numRangeBinsIndex < obj->numRangeBinsCalc; numRangeBinsIndex++)
     {
-        adcDataOffset = pingPongId(antIndx)*obj->numRangeBinsCalc;
+        radarCubeOffset = pingPongId(numRangeBinsIndex)*obj->numAzBinsCalc;
 
         // Start DMA transfer to move data from the next antenna (while processing the actual)
         // When processing data from RX1, move data from RX2. When processing data from RX4,
         // no further DMA transfer is needed
-        if (antIndx < (obj->numRxAntennas - 1))
+        if (numRangeBinsIndex < (obj->numRangeBinsCalc - 1))
         {
-            if (isPong(antIndx))
+            if (isPong(numRangeBinsIndex))
             {
                 EDMA_startDmaTransfer(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
-                        MMW_EDMA_CH_1D_IN_PING);
+                        MMW_EDMA_CH_2D_IN_PING);
             }
             else
             {
                 EDMA_startDmaTransfer(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
-                        MMW_EDMA_CH_1D_IN_PONG);
+                        MMW_EDMA_CH_2D_IN_PONG);
             }
         }
 
         // verify if DMA has completed for current antenna
         startTime1 = Cycleprofiler_getTimeStamp();
-        MmwDemo_dataPathWait1DInputData (obj, pingPongId(antIndx));
+        MmwDemo_dataPathWait2DInputData (obj, pingPongId(numRangeBinsIndex));
         waitingTime += Cycleprofiler_getTimeStamp() - startTime1;
 
 
-        // copy adc data into the adcDataCube
+ /*       // copy adc data into the adcDataCube
         memcpy(&obj->adcDataCube[antIndx*obj->numAdcSamples],   // DESTINATION
                &obj->adcDataIn[adcDataOffset],                  // SOURCE
                obj->numAdcSamples*sizeof(cmplx16ReIm_t) );      // LENGTH
 
 
-        /* Range FFT */
+         Range FFT
         // windowing
         mmwavelib_windowing16x16_evenlen(
                 (int16_t *) &obj->adcDataIn[adcDataOffset],
                 (int16_t *) obj->window1D,
                 obj->numAdcSamples);
-
+*/
         // reset zero-padded data (fft function overwrites input)
-        memset((void *)&obj->adcDataIn[adcDataOffset + obj->numAdcSamples],
-            0 , (obj->numRangeBinsCalc - obj->numAdcSamples) * sizeof(cmplx16ReIm_t));
+        memset((void *)&obj->dataAzIn[radarCubeOffset + (obj->numRxAntennas*obj->numTxAntennas)],
+            0 , (obj->numAzBinsCalc -  (obj->numRxAntennas*obj->numTxAntennas)) * sizeof(cmplx16ReIm_t));
 
         // fft
         DSP_fft16x16(
