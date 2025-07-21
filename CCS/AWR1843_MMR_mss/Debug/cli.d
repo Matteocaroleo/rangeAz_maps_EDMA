@@ -55,13 +55,13 @@ cli.obj: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/watchdog/Watchdog.
 cli.obj: C:/ti/ti-cgt-arm_16.9.6.LTS/include/stddef.h
 cli.obj: ../osal_nonos/Event_nonos.h
 cli.obj: C:/ti/ti-cgt-arm_16.9.6.LTS/include/stdlib.h
-cli.obj: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_config.h
-cli.obj: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/user_parameters.h
-cli.obj: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_messages.h
-cli.obj: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_output.h
+cli.obj: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_config.h
+cli.obj: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/user_parameters.h
+cli.obj: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_messages.h
+cli.obj: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_output.h
 cli.obj: ../configuration.h
 cli.obj: ../mss_functions.h
-cli.obj: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/communication1843.h
+cli.obj: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/communication1843.h
 cli.obj: ../sleep.h
 
 ../cli.c:
@@ -174,19 +174,19 @@ C:/ti/ti-cgt-arm_16.9.6.LTS/include/stddef.h:
 
 C:/ti/ti-cgt-arm_16.9.6.LTS/include/stdlib.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_config.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_config.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/user_parameters.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/user_parameters.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_messages.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_messages.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_output.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_output.h:
 
 ../configuration.h:
 
 ../mss_functions.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/communication1843.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/communication1843.h:
 
 ../sleep.h:
 

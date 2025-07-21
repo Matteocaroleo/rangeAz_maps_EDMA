@@ -58,9 +58,9 @@ dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/src/detection/mmwavelib_detection_float.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/src/detection/mmwavelib_aoaest_float.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/src/matutils/mmwavelib_matutils.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_messages.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_output.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_config.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_messages.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_output.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_config.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwave/mmwave.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/crc/crc.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwavelink/mmwavelink.h
@@ -72,8 +72,8 @@ dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwave
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwavelink/include/rl_messages.h
 dss_data_path.oe674: C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/DSP_fft32x32.h
 dss_data_path.oe674: C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P/DSP_fft16x16.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/communication1843.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/user_parameters.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/communication1843.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/user_parameters.h
 dss_data_path.oe674: C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/mathlib.h
 dss_data_path.oe674: C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/src/common/common.h
 dss_data_path.oe674: C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/src/common/c674/common.h
@@ -234,9 +234,9 @@ dss_data_path.oe674: ../dss_mmw.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/uart/UART.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/mailbox/mailbox.h
 dss_data_path.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/adcbuf/ADCBuf.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_data_path.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h
-dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_data_path.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h
+dss_data_path.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h
 dss_data_path.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/stdlib.h
 dss_data_path.oe674: ../dss_config_edma_util.h
 dss_data_path.oe674: ../dss_resources.h
@@ -357,11 +357,11 @@ C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/src/detection/mmwavel
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/alg/mmwavelib/src/matutils/mmwavelib_matutils.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_messages.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_messages.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_output.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_output.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_config.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_config.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwave/mmwave.h:
 
@@ -385,9 +385,9 @@ C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft32x32/c64P/DSP_fft32x32
 
 C:/ti/dsplib_c64Px_3_4_0_0/packages/ti/dsplib/src/DSP_fft16x16/c64P/DSP_fft16x16.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/communication1843.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/communication1843.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/user_parameters.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/user_parameters.h:
 
 C:/ti/mathlib_c674x_3_1_2_1/packages/ti/mathlib/mathlib.h:
 
@@ -709,11 +709,11 @@ C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/mailbox/mailbox.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/adcbuf/ADCBuf.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_data_path.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_data_path.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/stdlib.h:
 

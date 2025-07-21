@@ -54,12 +54,22 @@
 #define MMW_EDMA_CH_1D_OUT_PING          EDMA_TPCC0_REQ_FREE_2
 #define MMW_EDMA_CH_1D_OUT_PONG          EDMA_TPCC0_REQ_FREE_3
 
+///// AGGIUNTO ////
+#define MMW_EDMA_CH_2D_IN_PING           EDMA_TPCC0_REQ_FREE_4
+#define MMW_EDMA_CH_2D_IN_PONG           EDMA_TPCC0_REQ_FREE_5
+#define MMW_EDMA_CH_2D_OUT_PING          EDMA_TPCC0_REQ_FREE_6
+#define MMW_EDMA_CH_2D_OUT_PONG          EDMA_TPCC0_REQ_FREE_7
 
 /*shadow*/
 #define MMW_EDMA_CH_1D_IN_PING_SHADOW           (EDMA_NUM_DMA_CHANNELS + 0U)
 #define MMW_EDMA_CH_1D_IN_PONG_SHADOW           (EDMA_NUM_DMA_CHANNELS + 1U)
 #define MMW_EDMA_CH_1D_OUT_PING_SHADOW          (EDMA_NUM_DMA_CHANNELS + 2U)
 #define MMW_EDMA_CH_1D_OUT_PONG_SHADOW          (EDMA_NUM_DMA_CHANNELS + 3U)
+
+#define MMW_EDMA_CH_2D_IN_PING_SHADOW           (EDMA_NUM_DMA_CHANNELS + 4U)
+#define MMW_EDMA_CH_2D_IN_PONG_SHADOW           (EDMA_NUM_DMA_CHANNELS + 5U)
+#define MMW_EDMA_CH_2D_OUT_PING_SHADOW          (EDMA_NUM_DMA_CHANNELS + 6U)
+#define MMW_EDMA_CH_2D_OUT_PONG_SHADOW          (EDMA_NUM_DMA_CHANNELS + 7U)
 /*************************Data path EDMA resources END*******************************/
 
 /*************************LVDS streaming EDMA resources*******************************/

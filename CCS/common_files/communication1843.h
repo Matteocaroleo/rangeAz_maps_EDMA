@@ -1,5 +1,7 @@
 // Needed by dss and mss
 #define RANGE_ZEROPAD                   1  //No padding
+////////////// AGGIUNTO //////////////////
+#define AZIMUTH_ZEROPAD                 64
 
 #define N_BYTES_START_STOP_COMMAND      3
 #define START_CMD                       0xA

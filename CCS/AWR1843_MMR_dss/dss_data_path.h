@@ -231,6 +231,9 @@ typedef struct MmwDemo_DSS_DataPathObj_t
     /*! @brief number of processed range bins */
     uint16_t numRangeBinsProc;
 
+    /*! @brief number of calculated azimuth bins */
+    uint16_t numAzBinsCalc;
+
     /*! @brief range resolution in meters */
     float rangeResolution;
     float rangeAccuracy;
@@ -410,6 +413,13 @@ void interFrameProcessing(MmwDemo_DSS_DataPathObj *obj);
  *      Power of 2 round up function.
  */
 uint32_t MmwDemo_pow2roundup (uint32_t x);
+
+///////////////////////// AGGIUNTO ////////////////////
+void AzimuthProcess(MmwDemo_DSS_DataPathObj *obj, uint16_t azimuthIndx);
+void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongId)
+void MmwDemo_dataPathWait2DOutputData(MmwDemo_DSS_DataPathObj *obj, uint32_t pingPongId);
+
+
 
 
 #ifdef __cplusplus

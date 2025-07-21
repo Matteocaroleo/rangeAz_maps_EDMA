@@ -400,6 +400,82 @@ int32_t MmwDemo_dataPathConfigEdma(MmwDemo_DSS_DataPathObj *obj)
     if (retVal < 0)
         return -1;
 
+
+    //////////////////////// AGGIUNTO ////////////////////////////
+    // edma per passare i dati da radarCube (L3) a dataAzIn (L1) per processarli con ping pong
+    // FA LA TRASPOSTA per preparare i dati alla fft
+    // radarCube ---> dataAzIn
+    // Ping : chirp pari
+    // Pong : chirp dispari
+    eventQueue = 2U;
+    retVal = EDMAutil_configType1(
+            context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+            (uint8_t *)(&obj->radarCube[0]),
+            (uint8_t *)(SOC_translateAddress((uint32_t)&obj->dataAzIn[0],SOC_TranslateAddr_Dir_TO_EDMA,NULL)),
+            MMW_EDMA_CH_2D_IN_PING,
+            true,                // PER TRIGGERARE bCount TRASFERIMENTI OGNI CHIAMATA
+            MMW_EDMA_CH_2D_IN_PING_SHADOW,
+            BYTES_PER_SAMP_1D,   // aCount
+            (obj->numRxAntennas * obj->numTxAntennas) / 2, //bCount
+            obj->numRangeBinsCalc * BYTES_PER_SAMP_1D, //srcBIdx
+            0, //dstBIdx, non serve avere offset in destination
+            eventQueue,
+            NULL,
+            (uintptr_t) obj
+        );
+    retVal = EDMAutil_configType1(
+                context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                (uint8_t *)(&obj->radarCube[obj->numRangeBinsCalc * obj->numRxAntennas * obj->numTxAntennas]),
+                (uint8_t *)(SOC_translateAddress((uint32_t)&obj->dataAzIn[0],SOC_TranslateAddr_Dir_TO_EDMA,NULL)),
+                MMW_EDMA_CH_2D_IN_PONG,
+                true,   // PER TRIGGERARE bCount TRASFERIMENTI OGNI CHIAMATA
+                MMW_EDMA_CH_2D_IN_PONG_SHADOW,
+                BYTES_PER_SAMP_1D,   // aCount
+                (obj->numRxAntennas * obj->numTxAntennas)/ 2, //bCount (1Tx => 4 )
+                obj->numRangeBinsCalc * BYTES_PER_SAMP_1D, //srcBIdx
+                0, //dstBIdx, non serve avere offset in destination
+                eventQueue,
+                NULL,
+                (uintptr_t) obj
+            );
+    //////////////////////// AGGIUNTO ////////////////////////////
+        // edma per passare i dati da fftOut2d (L2) a rangeAzMap (L3)
+        // fftOut2D ---> rangeAzMap
+        // Ping : chirp pari
+        // Pong : chirp dispari
+        eventQueue = 3U;
+        retVal = EDMAutil_configType1(
+                context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                (uint8_t *)(&obj->fftOut2D[0]),
+                (uint8_t *)(SOC_translateAddress((uint32_t)&obj->rangeAzMap[0],SOC_TranslateAddr_Dir_TO_EDMA,NULL)),
+                MMW_EDMA_CH_2D_OUT_PING,
+                false,
+                MMW_EDMA_CH_2D_OUT_PING_SHADOW,
+                obj->numRxAntennas * obj->numRangeBinsCalc * obj->numTxAntennas,   // aCount
+                obj->numRxAntennas * obj->numTxAntennas,    //bCount (1Tx => 4 )
+                obj->numRangeBinsCalc * BYTES_PER_SAMP_1D, //srcBIdx
+                0, //dstBIdx, non serve avere offset in destination
+                eventQueue,
+                NULL,
+                (uintptr_t) obj
+            );
+        retVal = EDMAutil_configType1(
+                    context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                    (uint8_t *)(&obj->fftOut2D [obj->numAzBinsCalc]),
+                    (uint8_t *)(SOC_translateAddress((uint32_t)&obj->rangeAzMap[obj->numAzBinsCalc],SOC_TranslateAddr_Dir_TO_EDMA,NULL)),
+                    MMW_EDMA_CH_2D_OUT_PONG,
+                    false,
+                    MMW_EDMA_CH_2D_OUT_PONG_SHADOW,
+                    BYTES_PER_SAMP_1D,   // aCount
+                    obj->numRxAntennas * obj->numTxAntennas, //bCount (1Tx => 4 )
+                    obj->numRangeBinsCalc * BYTES_PER_SAMP_1D, //srcBIdx
+                    0, //dstBIdx, non serve avere offset in destination
+                    eventQueue,
+                    NULL,
+                    (uintptr_t) obj
+                );
+
+
     return(0);
 }
 
@@ -629,7 +705,6 @@ void interFrameProcessing(MmwDemo_DSS_DataPathObj *obj)
     /* WORKFLOW*/
 
     //- trasferimento ping pong CON TRASPOSTA
-        // config edma
 
 
 
@@ -888,7 +963,6 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
      * {dstPingPong+window2D+windowout+twidlle32x32+fftout}
      */
     uint32_t prev_end = heapL1start;
-
     MMW_ALLOC_BUF(adcDataIn, cmplx16ReIm_t,
                   heapL1start, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
                   2 * obj->numRangeBinsCalc);
@@ -897,7 +971,7 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
     ////////////////////////////// AGGIUNTO ////////////////////////////////
     MMW_ALLOC_BUF (dataAzIn, cmplx16ReIm_t,
                     adcDataIn_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP, // giusto alignment?
-                    2 * obj->numRxAntennas * obj->numRangeBinsCalc);
+                    2 * obj->numAzBinsCalc);
     ////////////////////////////////////////////////////////////////////////
 
 
@@ -929,7 +1003,7 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
     ////////////////////////////////// AGGIUNTO //////////////////////
     MMW_ALLOC_BUF(fftOut2D, int16_t,
                   window1D_end, SYS_MEMORY_ALLOC_DOUBLE_WORD_ALIGN_DSP,
-                  2 * obj->numRxAntennas * obj->numRangeBinsCalc);
+                  2 * obj->numAzBinsCalc);
     ////////////////////////////////////////////////////////////////////
 
 
@@ -1025,7 +1099,7 @@ void MmwDemo_dataPathConfigBuffers(MmwDemo_DSS_DataPathObj *obj, uint32_t adcBuf
 void MmwDemo_dataPathConfigFFTs(MmwDemo_DSS_DataPathObj *obj)
 {
 
-
+    // uint8_t numAzBinsCalc = 8;
     genWindow((void *)obj->window1D,
                         FFT_WINDOW_INT16,
                         obj->numAdcSamples,
@@ -1034,7 +1108,7 @@ void MmwDemo_dataPathConfigFFTs(MmwDemo_DSS_DataPathObj *obj)
                         MMW_WIN_BLACKMAN);
 
 
-    // GENERAZIONE WINDOW PER AZIMUTH
+    // GENERAZIONE WINDOW PER AZIMUTH: non serve forse (pochi campioni)?
 
 
 
@@ -1042,7 +1116,7 @@ void MmwDemo_dataPathConfigFFTs(MmwDemo_DSS_DataPathObj *obj)
     MmwDemo_gen_twiddle_fft16x16_fast((int16_t *)obj->twiddle16x16_1D, obj->numRangeBinsCalc);
 
     // GENERAZIONE TWIDDLE FACTOR PER AZIMUTH
-
+    MmwDemo_gen_twiddle_fft16x16_fast((int16_t *)obj->twiddle16x16_1D, obj->numAzBinsCalc);
 }
 
 
@@ -1320,6 +1394,171 @@ int32_t MmwDemo_gen_twiddle_fft16x16_fast(short *w, int32_t n)
 }
 
 
+//////////////// AGGIUNTO /////////////////////////
+/*
+ * Azimuth process: processa una fft range passando
+ * le righe tramite ping pong
+ *
+ *  azimuthIndx: index della fft range per capire se ping o pong
+ */
+
+void AzimuthProcess(MmwDemo_DSS_DataPathObj *obj, uint16_t azimuthIndx)
+{
+     uint32_t channelId;
+     uint32_t rangeAzMapOffset;
+
+     MmwDemo_DSS_dataPathContext_t *context = obj->context;
+
+     // Set src address for ping/pong edma channels
+     EDMA_setSourceAddress(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE], MMW_EDMA_CH_2D_IN_PING,
+        (uint32_t) &obj->radarCube[azimuthIndx * obj->numRxAntennas * obj->numRangeBinsCalc]); //* obj->numAdcSamples]);
+
+     EDMA_setSourceAddress(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE], MMW_EDMA_CH_2D_IN_PONG,
+         (uint32_t) &obj->radarCube[(azimuthIndx*  obj->numRxAntennas * obj->numRangeBinsCalc) + 1]);
+
+     // If the first 2 chirps has been transferred, wait for ping(or pong) transfer to finish
+     if(obj->chirpCount > 1)
+         MmwDemo_dataPathWait2DOutputData (obj, pingPongId(obj->chirpCount));
+
+     // Process the chirp (all rx antennas)
+     interAzimuthProcessing(obj, pingPongId(obj->chirpCount));
+
+     // Set and trigger dma transfer to move data to the radar cube
+     if(isPong(obj->chirpCount))
+         channelId = MMW_EDMA_CH_1D_OUT_PONG;
+     else
+         channelId = MMW_EDMA_CH_1D_OUT_PING;
+
+     rangeAzMapOffset = obj->numRangeBinsCalc * obj->numRxAntennas * obj->chirpCount;
+     EDMAutil_setAndTrigger(
+             context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+             (uint8_t *)NULL,
+             (uint8_t *)(&obj->rangeAzMap[rangeAzMapOffset]),
+             (uint8_t)channelId,
+             (uint8_t)MMW_EDMA_TRIGGER_ENABLE);
+
+     // Update counters
+     obj->chirpCount++;
+     obj->txAntennaCount++;
+     if(obj->txAntennaCount == obj->numTxAntennas)
+     {
+         obj->txAntennaCount = 0;
+         obj->chirpPerTxCount++;
+         if (obj->chirpPerTxCount == obj->numChirpsPerFramePerTx)
+         {
+             obj->chirpPerTxCount = 0;
+             obj->chirpCount = 0;
+         }
+     }
+
+ }
 
 
+/*
+ *  Interchirp processing. It is executed per chirp event, after ADC
+ *  buffer is filled with chirp samples.
+ *  This function executes: windowing and fft
+ */
+
+void interAzimuthProcessing(MmwDemo_DSS_DataPathObj *obj, uint8_t chirpPingPongId)
+{
+    uint32_t antIndx, waitingTime;
+    volatile uint32_t startTime;
+    volatile uint32_t startTime1;
+    MmwDemo_DSS_dataPathContext_t *context = obj->context;
+
+    uint32_t adcDataOffset;
+
+    waitingTime = 0;
+    startTime = Cycleprofiler_getTimeStamp();
+
+    // Start DMA transfer to fetch data from RX1
+    EDMA_startDmaTransfer(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                       MMW_EDMA_CH_1D_IN_PING);
+
+    // 1d fft for first antenna, followed by kicking off the DMA of fft output
+    for (antIndx = 0; antIndx < obj->numRxAntennas; antIndx++)
+    {
+        adcDataOffset = pingPongId(antIndx)*obj->numRangeBinsCalc;
+
+        // Start DMA transfer to move data from the next antenna (while processing the actual)
+        // When processing data from RX1, move data from RX2. When processing data from RX4,
+        // no further DMA transfer is needed
+        if (antIndx < (obj->numRxAntennas - 1))
+        {
+            if (isPong(antIndx))
+            {
+                EDMA_startDmaTransfer(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                        MMW_EDMA_CH_1D_IN_PING);
+            }
+            else
+            {
+                EDMA_startDmaTransfer(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                        MMW_EDMA_CH_1D_IN_PONG);
+            }
+        }
+
+        // verify if DMA has completed for current antenna
+        startTime1 = Cycleprofiler_getTimeStamp();
+        MmwDemo_dataPathWait1DInputData (obj, pingPongId(antIndx));
+        waitingTime += Cycleprofiler_getTimeStamp() - startTime1;
+
+
+        // copy adc data into the adcDataCube
+        memcpy(&obj->adcDataCube[antIndx*obj->numAdcSamples],   // DESTINATION
+               &obj->adcDataIn[adcDataOffset],                  // SOURCE
+               obj->numAdcSamples*sizeof(cmplx16ReIm_t) );      // LENGTH
+
+
+        /* Range FFT */
+        // windowing
+        mmwavelib_windowing16x16_evenlen(
+                (int16_t *) &obj->adcDataIn[adcDataOffset],
+                (int16_t *) obj->window1D,
+                obj->numAdcSamples);
+
+        // reset zero-padded data (fft function overwrites input)
+        memset((void *)&obj->adcDataIn[adcDataOffset + obj->numAdcSamples],
+            0 , (obj->numRangeBinsCalc - obj->numAdcSamples) * sizeof(cmplx16ReIm_t));
+
+        // fft
+        DSP_fft16x16(
+                (int16_t *) obj->twiddle16x16_1D,
+                obj->numRangeBinsCalc,
+                (int16_t *) &obj->adcDataIn[adcDataOffset],
+                (int16_t *) &obj->fftOut1D[chirpPingPongId * (obj->numRxAntennas * obj->numRangeBinsCalc) +
+                                               (obj->numRangeBinsCalc * antIndx)]);
+    }
+
+    gCycleLog.interChirpProcessingTime += Cycleprofiler_getTimeStamp() - startTime - waitingTime;
+    gCycleLog.interChirpWaitTime += waitingTime;
+
+}
+
+
+void MmwDemo_dataPathWait2DOutputData(MmwDemo_DSS_DataPathObj *obj, uint32_t pingPongId)
+{
+    MmwDemo_DSS_dataPathContext_t *context = obj->context;
+
+    /* wait until transfer done */
+    volatile bool isTransferDone;
+    uint8_t chId;
+    if(pingPongId == 0)
+    {
+        chId = MMW_EDMA_CH_2D_OUT_PING;
+    }
+    else
+    {
+        chId = MMW_EDMA_CH_2D_OUT_PONG;
+    }
+    do {
+        if (EDMA_isTransferComplete(context->edmaHandle[MMW_DATA_PATH_EDMA_INSTANCE],
+                                    chId,
+                                    (bool *)&isTransferDone) != EDMA_NO_ERROR)
+        {
+            MmwDemo_dssAssert(0);
+        }
+    } while (isTransferDone == false);
+
+}
 

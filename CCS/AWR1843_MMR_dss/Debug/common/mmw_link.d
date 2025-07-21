@@ -34,14 +34,14 @@ common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwa
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwavelink/include/rl_messages.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/crc/crc.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/osal/hwiP.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_config.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_config.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwave/mmwave.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/soc.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/include/soc_common.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/include/soc_xwr18xx.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_messages.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_output.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_mmw.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_messages.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_output.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_mmw.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/uart/UART.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/edma/edma.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/edma/include/edma_low_level.h
@@ -49,10 +49,10 @@ common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/edma
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/edma/include/hw_edma_tpcc.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/adcbuf/ADCBuf.h
 common/mmw_link.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/osal/DebugP.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_data_path.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/user_parameters.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h
-common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_data_path.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/user_parameters.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h
+common/mmw_link.oe674: C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h
 common/mmw_link.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/stdlib.h
 
 ../common/mmw_link.c:
@@ -123,7 +123,7 @@ C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/crc/crc.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/osal/hwiP.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_config.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_config.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/control/mmwave/mmwave.h:
 
@@ -133,11 +133,11 @@ C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/include/soc_common.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/soc/include/soc_xwr18xx.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_messages.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_messages.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/mmw_output.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/mmw_output.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_mmw.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_mmw.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/uart/UART.h:
 
@@ -153,13 +153,13 @@ C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/adcbuf/ADCBuf.h:
 
 C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/drivers/osal/DebugP.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_data_path.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_data_path.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/common_files/user_parameters.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/common_files/user_parameters.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/dss_vitalSignsDemo_utilsFunc.h:
 
-C:/Users/matte/Desktop/polito_locale/rers/esempioSalvador/Radar/gruppo2/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h:
+C:/Users/matte/Desktop/polito_locale/rers/repo/Radar/CCS/AWR1843_MMR_dss/osal_nonos/Event_nonos.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/stdlib.h:
 
