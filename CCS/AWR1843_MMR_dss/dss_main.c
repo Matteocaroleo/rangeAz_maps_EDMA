@@ -1239,6 +1239,7 @@ bool parseProfileAndChirpConfig(MmwDemo_DSS_DataPathObj *dataPathObj,
             dataPathObj->rangeZeropad   = RANGE_ZEROPAD;
             dataPathObj->numAdcSamples       = profileCfg.numAdcSamples;
             dataPathObj->numRangeBinsCalc    = MmwDemo_pow2roundup(dataPathObj->rangeZeropad*dataPathObj->numAdcSamples);
+            dataPathObj->numAzBinsCalc       = MmwDemo_pow2roundup(dataPathObj->numRxAntennas*dataPathObj->numTxAntennas);
             dataPathObj->numChirpsPerFrame   = (frameChirpEndIdx -frameChirpStartIdx + 1) * numLoops;
             dataPathObj->numChirpsPerFramePerTx = dataPathObj->numChirpsPerFrame/dataPathObj->numTxAntennas;
 
