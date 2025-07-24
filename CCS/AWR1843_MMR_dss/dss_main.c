@@ -680,10 +680,10 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
     }
 
     // OUR HEATMAP (Range-Azimuth)
-
+/*
     if (obj->transmitAdcData == 1){
 
-        /* Heatmap data */
+        // Heatmap data
         itemPayloadLen = obj->numAzBinsCalc*sizeof(cmplx16ReIm_t);
         totalHsmSize += itemPayloadLen;
         if(totalHsmSize > outputBufSize)
@@ -701,12 +701,12 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
         totalPacketLen += sizeof(MmwDemo_output_message_tl) + itemPayloadLen;
         ptrCurrBuffer = (uint8_t *)((uint32_t)ptrHsmBuffer + totalHsmSize);
     }
+*/
+ //OLD CODE
 
-/* OLD CODE
+     if (obj->transmitAdcData == 1){
 
-    if (obj->transmitAdcData == 1){
-
-        /* Adc data
+        /* Adc data */
         itemPayloadLen = obj->numAdcSamples*obj->numRxAntennas *
                 obj->numChirpsProc*sizeof(cmplx16ReIm_t);
         totalHsmSize += itemPayloadLen;
@@ -725,8 +725,8 @@ int32_t MmwDemo_dssSendProcessOutputToMSS
         totalPacketLen += sizeof(MmwDemo_output_message_tl) + itemPayloadLen;
         ptrCurrBuffer = (uint8_t *)((uint32_t)ptrHsmBuffer + totalHsmSize);
     }
-*/
-    /* Filling other info */
+
+    // Filling other info
     message.body.detObj.header.numTLVs = tlvIdx;
     /* Round up packet length to multiple of MMWDEMO_OUTPUT_MSG_SEGMENT_LEN */
     message.body.detObj.header.totalPacketLen = MMWDEMO_OUTPUT_MSG_SEGMENT_LEN *
@@ -1700,7 +1700,7 @@ static void dssInitTask()
 
     /* Setup the configuration: */
     mboxCfg.chType       = MAILBOX_CHTYPE_MULTI;
-    mboxCfg.chId         = MAILBOX_CH_ID_0;
+    mboxCfg.chId         = MAILBOX_CH_ID_0      ;
     mboxCfg.writeMode    = MAILBOX_MODE_BLOCKING;
     mboxCfg.readMode     = MAILBOX_MODE_CALLBACK;
     mboxCfg.readCallback = &mboxCallback;

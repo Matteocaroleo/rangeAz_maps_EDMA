@@ -32,8 +32,8 @@
  */
 /******************************************************************************
  *
- * This file was automatically generated on 7/21/2025 at 5:58:39 PM
- * by TI PinMux version 1.12.0+2406 and is provided to be used with mmWave SDK Pinmux Driver
+ * This file was automatically generated on 21/7/2025 at 18:53:46
+ * by TI PinMux version 1.11.0+2225 and is provided to be used with mmWave SDK Pinmux Driver
  *
  ******************************************************************************/
 

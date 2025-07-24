@@ -10,12 +10,12 @@ dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/sys/_types.
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/machine/_types.h
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/machine/_stdint.h
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/sys/_stdint.h
-dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_common.h
-dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_types.h
+dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_common.h
+dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_types.h
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/stdbool.h
-dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_defs.h
-dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_common_xwr18xx.h
-dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_common_xwr18xx_dss.h
+dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_defs.h
+dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_common_xwr18xx.h
+dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_common_xwr18xx_dss.h
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/stdlib.h
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/_ti_config.h
 dss_vitalSignsDemo_utilsFunc.oe674: C:/ti/ti-cgt-c6000_8.3.3/include/linkage.h
@@ -51,17 +51,17 @@ C:/ti/ti-cgt-c6000_8.3.3/include/machine/_stdint.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/sys/_stdint.h:
 
-C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_common.h:
+C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_common.h:
 
-C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_types.h:
+C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_types.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/stdbool.h:
 
-C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_defs.h:
+C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_defs.h:
 
-C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_common_xwr18xx.h:
+C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_common_xwr18xx.h:
 
-C:/ti/mmwave_sdk_03_05_00_04/packages/ti/common/sys_common_xwr18xx_dss.h:
+C:/ti/mmwave_sdk_03_06_02_00-LTS/packages/ti/common/sys_common_xwr18xx_dss.h:
 
 C:/ti/ti-cgt-c6000_8.3.3/include/stdlib.h:
 
