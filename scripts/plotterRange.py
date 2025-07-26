@@ -9,6 +9,8 @@ import argparse
 parser = argparse.ArgumentParser()
 parser.add_argument ("input", default="rangeMatrix.txt")
 parser.add_argument ("output", default="figs/rangePlot.png")
+parser.add_argument ("--from_column", default=0, type=int)
+parser.add_argument ("--to_column", default=256, type=int)
 args= parser.parse_args()
 data_raw = np.loadtxt(args.input)  # shape (4, 2048) se real/imag alternati
 
@@ -24,13 +26,12 @@ intensity = np.abs(data_complex)
 # Asse X: distanza SAPENDO CHE RISOLUZIONE è 4cm
 
 radar_res = 4e-2; #m
-n_samples = 256;
-x = np.arange(0, n_samples*radar_res, radar_res)  # da 0 a 1023
-
+x = np.arange(radar_res*args.from_column, radar_res*(args.to_column), radar_res)  # da 0 a 1023
+intensity_filtered = intensity[:,args.from_column:(args.to_column)] #+1 è perchè non include il 256
 # Plot
 plt.figure(figsize=(12, 6))
 for i in range(4):
-    plt.plot(x, intensity[i], label=f'Antenna {i+1}')
+    plt.plot(x, intensity_filtered[i], label=f'Antenna {i+1}')
 
 plt.title("FFT Range")
 plt.xlabel("Range [m]")
