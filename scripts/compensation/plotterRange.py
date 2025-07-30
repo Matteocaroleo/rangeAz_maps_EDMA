@@ -12,7 +12,6 @@ parser.add_argument ("output", default="figs/rangePlot.png")
 parser.add_argument ("--from_column", default=0, type=int)
 parser.add_argument ("--to_column", default=256, type=int)
 parser.add_argument ("--angle", default="no", choices = ["yes", "no"])
-parser.add_argument ("--dB", default="yes", choices = ["yes", "no"])
 args= parser.parse_args()
 data_raw = np.loadtxt(args.input)  # shape (4, 2048) se real/imag alternati
 
@@ -22,12 +21,9 @@ imag_part = data_raw[:, 1::2]
 data_complex = real_part + 1j * imag_part  # shape: (4, 1024)
 
 # Calcola l'intensità in dB
-
-if args.dB=="yes":
-    intensity = 20 * np.log10(np.abs(data_complex) + 1e-12)  # aggiunto epsilon per evitare log(0)
-else:
-    intensity = np.abs(data_complex) 
-angle = np.angle (data_complex, deg=True)
+# intensity_db = 10 * np.log10(np.abs(data_complex) + 1e-12)  # aggiunto epsilon per evitare log(0)
+intensity = np.abs(data_complex) 
+angle = np.angle (data_complex)
 # Asse X: distanza SAPENDO CHE RISOLUZIONE è 4cm
 print(angle)
 np.savetxt("angle.txt", angle)
@@ -39,7 +35,6 @@ angle_filtered = angle[:,args.from_column:(args.to_column  )] #+1 è perchè non
 
 
 # FOR CALIBRATION
-print ("BEFORE CALIBRATION")
 print ("antenna1",angle[0,57], "antenna2", angle[1,57], "antenna3", angle [2,57], "antenna4", angle [3,57])
 
 # Plot
@@ -56,13 +51,10 @@ plt.title("FFT Range")
 plt.xlabel("Range [m]")
 if args.angle == "yes":
     plt.ylabel("fase (Lineare)")
-else:
-    if args.dB=="yes":
-        plt.ylabel ("Intensità (dB)")
-    else:
-        plt.ylabel ("Intensità (lineare)")
+else: 
+    plt.ylabel ("intensità (lineare)")
+
 plt.legend()
 plt.tight_layout()
-plt.grid(which="both")
 plt.savefig(args.output, dpi=300)
 plt.close()

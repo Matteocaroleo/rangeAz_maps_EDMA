@@ -6,10 +6,11 @@ parser = argparse.ArgumentParser()
 parser.add_argument ("input", default="azimuthMatrix.txt")
 parser.add_argument ("--output_png", default="figs/rangeAzMap.png")
 parser.add_argument ("--from_row", default=0, type=int)
-parser.add_argument ("--to_row", default=1024, type=int)
+parser.add_argument ("--to_row", default=512, type=int)
 parser.add_argument ("--from_column", default=0, type=int)
 parser.add_argument ("--to_column", default=64, type=int)
 parser.add_argument ("--fftshift", default="no", choices=["yes","no"])
+parser.add_argument ("--dB", default="yes", choices=["yes", "no"])
 args=parser.parse_args()
 
 # 1. Carica matrice rangeAzimuth (1024 righe, 128 colonne = real+imag)
@@ -31,8 +32,10 @@ elif args.fftshift!="no":
     raise SystemExit(1)
 
 # 3. Calcola modulo
-magnitude = np.abs(data_complex)
-
+if args.dB == "yes":
+    magnitude = 20*np.log10 (np.abs(data_complex) + 1)#e-12)
+else:
+    magnitude = np.abs(data_complex)
 
 # filtra righe e colonne in base a parametro passato
 filtered_mag = magnitude[args.from_row:args.to_row , args.from_column:args.to_column]
@@ -48,9 +51,13 @@ im = plt.imshow(
     aspect='auto',
     cmap='inferno',
     origin='lower',
-    extent = [-90, 90, radar_res*(args.from_row/2), radar_res*(args.to_row/2)] # si divide per 2 perchè sulle colonne c'erano sia reali che immaginari
+    extent = [-90, 90, radar_res*(args.from_row), radar_res*(args.to_row)] 
 )
-plt.colorbar(im, label='Intensity')
+if args.dB == "yes":
+    plt.colorbar(im, label='Intensity (dB)')
+else:
+    plt.colorbar(im, label='Intensity (linear)')
+
 plt.xlabel('Azimuth degrees [FAKE SCALE]')
 plt.ylabel('Range [m]')
 plt.title('Range–Azimuth Intensity ')

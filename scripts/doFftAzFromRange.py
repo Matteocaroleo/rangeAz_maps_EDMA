@@ -22,6 +22,20 @@ print ("caricata:", data, data.shape)
 real = data[:, 0::2]
 imag = data[:, 1::2]
 data_complex = real + 1j*imag 
+
+#CALIBRATION
+print ("CALIBRATION")
+
+data_complex [0,:] = data_complex[0,:] * (0.6123789873959634-0.790564340073529*1j)
+data_complex [1,:] = data_complex[1,:] * (0.4528381180335873-0.891592753927374*1j)
+data_complex [2,:] = data_complex[2,:] * (0.45050519411583945-0.8927738067812304*1j)
+data_complex [3,:] = data_complex[3,:] * (0.2199655932205092-0.9755076308256894*1j)
+
+angle=np.angle(data_complex)
+
+print ("antenna1",angle[0,57], "antenna2", angle[1,57], "antenna3", angle [2,57], "antenna4", angle [3,57])
+
+
 print ("data complex:", data_complex, data_complex.shape)
 
 # 2. Trasponi → 1024×4 e fai zero padding 
@@ -55,7 +69,7 @@ if args.round_int16 == "yes":
 elif args.round_int16 == "no":
     np.savetxt(args.output, output_data)
 else:
-    proint ("wrong argument to round")
+    print ("wrong argument to round")
     raise SystemExit(1)
 
 
