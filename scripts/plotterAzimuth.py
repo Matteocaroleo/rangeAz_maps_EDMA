@@ -51,14 +51,14 @@ im = plt.imshow(
     aspect='auto',
     cmap='inferno',
     origin='lower',
-    extent = [-90, 90, radar_res*(args.from_row), radar_res*(args.to_row)] 
+    extent = [-55, 55, radar_res*(args.from_row), radar_res*(args.to_row)] 
 )
 if args.dB == "yes":
     plt.colorbar(im, label='Intensity (dB)')
 else:
     plt.colorbar(im, label='Intensity (linear)')
 
-plt.xlabel('Azimuth degrees [FAKE SCALE]')
+plt.xlabel('Azimuth degrees')
 plt.ylabel('Range [m]')
 plt.title('Range–Azimuth Intensity ')
 plt.tight_layout()

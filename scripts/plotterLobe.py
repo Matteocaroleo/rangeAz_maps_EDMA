@@ -38,27 +38,26 @@ else:
 # resolution
 radar_res = 4e-2 #[m]
 degrees = np.arange (start= -55, stop=55, step=110/64)
-db=np.arange (start=70,stop=90,step=1)
 
 peak = 0
-for  x in range (20, 255):
+for  x in range (7, 255):
     temp = max(magnitude[x,:])
     if peak < temp :
         peak = temp
         row_num = x
 
+db=np.arange (start=min(magnitude[row_num,:]),stop=max(magnitude[row_num,:]) + (max(magnitude[row_num,:])-min(magnitude[row_num,:])) / 20, step= (max(magnitude[row_num,:])-min(magnitude[row_num,:])) / 20)
 print (peak)
 print (row_num)
 # 4. Plot heatmap 
 plt.figure(figsize=(10, 6))
 plt.plot (degrees, magnitude[row_num,:])
-plt.xlabel('Azimuth gradi ')
+plt.xlabel('Azimuth gradi')
 plt.ylabel('Intensità [dB]')
-plt.title('Azimuth al range del corner reflector (2.28m) ')
+plt.title('Azimuth al range del target a ' + str( row_num*radar_res) + ' metri')
 plt.tight_layout()
 plt.hlines (y=max(magnitude[row_num,:]) - 3, xmin = degrees[0], xmax = degrees[63], linestyle="--", label='-3dB')
 plt.hlines (y=max(magnitude[row_num,:]) - 13, xmin = degrees[0], xmax = degrees[63], linestyle=":", label='-13dB')
-plt.vlines (x=30, ymin = 70, ymax = max(magnitude[row_num,:]), linestyle="--", label="30 gradi", color = "r")
 plt.grid(which = "both",linestyle="--")
 plt.xticks(ticks=degrees[0::4])
 plt.yticks(ticks=db[0::2])

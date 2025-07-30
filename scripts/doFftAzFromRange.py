@@ -32,7 +32,7 @@ if args.calibrate == "yes":
     data_complex [3,:] = data_complex[3,:] * (0.2199655932205092-0.9755076308256894*1j)
     data_complex.real = np.int16(data_complex.real)
     data_complex.imag = np.int16(data_complex.imag)
-    np.savetxt ("rangeCalibrated.txt", data_complex, fmt='%.4e')
+    np.savetxt ("data/rangeCalibrated.txt", data_complex, fmt='%.4e')
     print ("IMMAGINARI:",data_complex.imag)
             
 
