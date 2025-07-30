@@ -7,7 +7,7 @@ parser.add_argument("input_filename")
 parser.add_argument("--output", default="azimuthMatrix.txt")
 parser.add_argument("--doshift", default="yes", choices=["yes", "no"])
 parser.add_argument("--round_int16", default="yes", choices=["yes", "no"])
-
+parser.add_argument("--calibrate", default="yes", choices=["yes","no"])
 args = parser.parse_args()
 input_filename = Path(args.input_filename)
 
@@ -25,11 +25,16 @@ data_complex = real + 1j*imag
 
 #CALIBRATION
 print ("CALIBRATION")
-
-data_complex [0,:] = data_complex[0,:] * (0.6123789873959634-0.790564340073529*1j)
-data_complex [1,:] = data_complex[1,:] * (0.4528381180335873-0.891592753927374*1j)
-data_complex [2,:] = data_complex[2,:] * (0.45050519411583945-0.8927738067812304*1j)
-data_complex [3,:] = data_complex[3,:] * (0.2199655932205092-0.9755076308256894*1j)
+if args.calibrate == "yes":
+    data_complex [0,:] = data_complex[0,:] * (0.6123789873959634-0.790564340073529*1j)
+    data_complex [1,:] = data_complex[1,:] * (0.4528381180335873-0.891592753927374*1j)
+    data_complex [2,:] = data_complex[2,:] * (0.45050519411583945-0.8927738067812304*1j)
+    data_complex [3,:] = data_complex[3,:] * (0.2199655932205092-0.9755076308256894*1j)
+    data_complex.real = np.int16(data_complex.real)
+    data_complex.imag = np.int16(data_complex.imag)
+    np.savetxt ("rangeCalibrated.txt", data_complex, fmt='%.4e')
+    print ("IMMAGINARI:",data_complex.imag)
+            
 
 angle=np.angle(data_complex)
 

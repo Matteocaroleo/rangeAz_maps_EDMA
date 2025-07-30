@@ -25,6 +25,11 @@ data_complex = real_part + 1j * imag_part  # shape: (4, 1024)
 
 if args.dB=="yes":
     intensity = 20 * np.log10(np.abs(data_complex) + 1e-12)  # aggiunto epsilon per evitare log(0)
+    
+    # satura a 0 per evitare il meno infinito
+    for x in range (0,4):
+        for y in range (0, 256):
+            if intensity[x, y] < 0 : intensity[x, y] = 0
 else:
     intensity = np.abs(data_complex) 
 angle = np.angle (data_complex, deg=True)
