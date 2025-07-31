@@ -49,9 +49,11 @@ plt.figure(figsize=(10, 6))
 im = plt.imshow(
     filtered_mag,
     aspect='auto',
+    vmax=80,
+    vmin=50,
     cmap='inferno',
     origin='lower',
-    extent = [-55, 55, radar_res*(args.from_row), radar_res*(args.to_row)] 
+    extent = [-90, 90, radar_res*(args.from_row), radar_res*(args.to_row)] 
 )
 if args.dB == "yes":
     plt.colorbar(im, label='Intensity (dB)')
