@@ -41,7 +41,7 @@ def save_matrix(matrix, output_path):
     with open(output_path, 'w') as f:
         for row in matrix:
             f.write('\t'.join(str(x) for x in row) + '\n')
-    print(f"✅ Matrice 512x4 salvata in: '{output_path}'")
+#    print(f"✅ Matrice 512x4 salvata in: '{output_path}'")
 
 # --- MAIN ---
 if __name__ == "__main__":

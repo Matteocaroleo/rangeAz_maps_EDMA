@@ -4,7 +4,8 @@ import argparse
 
 parser = argparse.ArgumentParser()
 parser.add_argument ("input", default="azimuthMatrix.txt")
-parser.add_argument ("--output_png", default="figs/rangeAzMap.png")
+parser.add_argument ("--output_azimuth_png", default="figs/rangeAzMap.png")
+parser.add_argument ("--output_range_png", default="figs/rangeMap.png")
 parser.add_argument ("--fftshift", default="no", choices=["yes","no"])
 parser.add_argument ("--dB", default="yes", choices=["yes", "no"])
 args=parser.parse_args()
@@ -17,9 +18,6 @@ real = data_raw[:, 0::2]
 imag = data_raw[:, 1::2]
 data_complex = real + 1j * imag  # shape: (1024, 64)
 
-# debug
-print ("plotterAzimuth loaded data:")
-print (data_complex)
 
 if args.fftshift=="yes":
     data_complex=np.fft.fftshift(data_complex, axes=1)
@@ -37,7 +35,7 @@ else:
 
 # resolution
 radar_res = 4e-2 #[m]
-degrees = np.arange (start= -55, stop=55, step=110/64)
+degrees = np.arange (start= -90, stop=90, step=180/64)
 
 peak = 0
 for  x in range (7, 255):
@@ -45,13 +43,20 @@ for  x in range (7, 255):
     if peak < temp :
         peak = temp
         row_num = x
+        for y in range (0, 63):
+            if magnitude [x,y] == peak:
+                column_number = y
 
-db=np.arange (start=min(magnitude[row_num,:]),stop=max(magnitude[row_num,:]) + (max(magnitude[row_num,:])-min(magnitude[row_num,:])) / 20, step= (max(magnitude[row_num,:])-min(magnitude[row_num,:])) / 20)
+
+
+#AZIMUTH AT RANGE 
+#db=np.arange (start=min(magnitude[row_num,:]),stop=max(magnitude[row_num,:]) + (max(magnitude[row_num,:])-min(magnitude[row_num,:])) / 20, step= (max(magnitude[row_num,:])-min(magnitude[row_num,:])) / 20)
+db = np.arange (50, 80, 1)
 print (peak)
-print (row_num)
 # 4. Plot heatmap 
 plt.figure(figsize=(10, 6))
 plt.plot (degrees, magnitude[row_num,:])
+plt.ylim (bottom=50, top=80)
 plt.xlabel('Azimuth gradi')
 plt.ylabel('Intensità [dB]')
 plt.title('Azimuth al range del target a ' + str( row_num*radar_res) + ' metri')
@@ -64,5 +69,29 @@ plt.yticks(ticks=db[0::2])
 plt.legend()
 
 # 5. Salva la figura
-plt.savefig(args.output_png, dpi=400)
+plt.savefig(args.output_azimuth_png, dpi=400)
 plt.close()
+
+
+# RANGE PROFILE
+radar_res = 4e-2 # metri
+radar_ang_res = 180/64 # degrees
+meters = np.arange (radar_res*8, radar_res*101, radar_res)
+plt.figure(figsize=(10, 6))
+plt.plot (meters, magnitude[7:100,column_number])
+plt.ylim (bottom=50, top=80)
+plt.xlabel('Range [m]')
+plt.ylabel('Intensity [dB]')
+plt.title('Range at target azimuth ' + str(column_number*radar_ang_res - 90) + ' degrees')
+plt.tight_layout()
+plt.grid(which = "both",linestyle="--")
+plt.xticks(ticks=meters[0::4])
+plt.yticks(ticks=db[0::2])
+
+# 5. Salva la figura
+plt.savefig(args.output_range_png, dpi=400)
+plt.close()
+
+
+
+
