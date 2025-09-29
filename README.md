@@ -1,6 +1,6 @@
 # Description
 
-This repo is the work by Mattew Primate 344724, Lorenzo Sgrò 348963, Edward Hillock 348918 and Walter De Luca 344245 made for the course "Radar and Remote Sensing" at Politecnico di Torino.
+This repo is the work by Matteo caroleo 344724, Lorenzo Sgrò 348963, Edward Hillock 348918 and Walter De Luca 344245 made for the course "Radar and Remote Sensing" at Politecnico di Torino.
 In the folder "scripts/measurement" there are the acquired maps taken to validate the project. 
 
 ## Installation
